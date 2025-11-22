@@ -34,7 +34,7 @@ jobs:
         brew install openssl
     
     - name: Set up CMake
-      uses: jwlawson/actions-setup-cmake@v1.14
+      uses: jwlawson/actions-setup-cmake@v2.0
     
     - name: Run verification
       run: |
