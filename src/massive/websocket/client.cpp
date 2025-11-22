@@ -148,7 +148,8 @@ void WebSocketClient::authenticate() {
     auth_msg << R"({"action":"auth","params":")" << api_key_ << R"("})";
     std::string auth_str = auth_msg.str();
     
-    impl->ws->write(net::buffer(auth_str));
+    net::const_buffer auth_buf(auth_str.data(), auth_str.size());
+    impl->ws->write(auth_buf);
     
     // Read auth response
     beast::flat_buffer buffer;
@@ -210,7 +211,8 @@ void WebSocketClient::reconcile_subscriptions() {
         }
         sub_msg << R"("})";
         std::string sub_str = sub_msg.str();
-        impl->ws->write(net::buffer(sub_str));
+        net::const_buffer sub_buf(sub_str.data(), sub_str.size());
+        impl->ws->write(sub_buf);
     }
     
     // Unsubscribe from removed subscriptions
@@ -233,7 +235,8 @@ void WebSocketClient::reconcile_subscriptions() {
         unsub_msg << R"("})";
         
         std::string unsub_str = unsub_msg.str();
-        impl->ws->write(net::buffer(unsub_str));
+        net::const_buffer unsub_buf(unsub_str.data(), unsub_str.size());
+        impl->ws->write(unsub_buf);
     }
     
     current_subscriptions_ = scheduled_subscriptions_;

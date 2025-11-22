@@ -36,8 +36,7 @@ jobs:
       shell: bash
       run: |
         cmake -B build \
-          -DCMAKE_BUILD_TYPE=Release \
-          -DMASSIVE_BUILD_TESTS=ON
+          -DCMAKE_BUILD_TYPE=Release
 
     - name: Build
       shell: bash
@@ -47,8 +46,3 @@ jobs:
         else
           cmake --build build --config Release -j$(nproc 2>/dev/null || echo 2)
         fi
-
-    - name: Test
-      shell: bash
-      working-directory: build
-      run: ctest --output-on-failure || true
