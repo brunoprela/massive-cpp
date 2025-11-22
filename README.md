@@ -5,7 +5,6 @@ Modern C++20 SDK for the Massive (formerly Polygon.io) REST and WebSocket APIs. 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://en.cppreference.com/w/cpp/20)
 [![CMake](https://img.shields.io/badge/CMake-3.20%2B-blue.svg)](https://cmake.org/)
-[![Documentation](https://img.shields.io/badge/docs-doxygen-blue.svg)](https://massive-com.github.io/massive-cpp)
 [![Conan](https://img.shields.io/badge/Conan-available-green.svg)](https://conan.io)
 [![vcpkg](https://img.shields.io/badge/vcpkg-available-blue.svg)](https://vcpkg.io)
 
