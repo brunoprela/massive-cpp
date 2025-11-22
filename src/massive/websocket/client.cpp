@@ -7,6 +7,7 @@
 #include <boost/asio/connect.hpp>
 #include <boost/asio/ip/tcp.hpp>
 #include <boost/asio/ssl/stream.hpp>
+#include <boost/asio/buffer.hpp>
 #include <simdjson/ondemand.h>
 #include <sstream>
 #include <stdexcept>
@@ -148,8 +149,7 @@ void WebSocketClient::authenticate() {
     auth_msg << R"({"action":"auth","params":")" << api_key_ << R"("})";
     std::string auth_str = auth_msg.str();
     
-    net::const_buffer auth_buf(auth_str.data(), auth_str.size());
-    impl->ws->write(auth_buf);
+    impl->ws->write(net::buffer(auth_str));
     
     // Read auth response
     beast::flat_buffer buffer;
@@ -211,8 +211,7 @@ void WebSocketClient::reconcile_subscriptions() {
         }
         sub_msg << R"("})";
         std::string sub_str = sub_msg.str();
-        net::const_buffer sub_buf(sub_str.data(), sub_str.size());
-        impl->ws->write(sub_buf);
+        impl->ws->write(net::buffer(sub_str));
     }
     
     // Unsubscribe from removed subscriptions
@@ -235,8 +234,7 @@ void WebSocketClient::reconcile_subscriptions() {
         unsub_msg << R"("})";
         
         std::string unsub_str = unsub_msg.str();
-        net::const_buffer unsub_buf(unsub_str.data(), unsub_str.size());
-        impl->ws->write(unsub_buf);
+        impl->ws->write(net::buffer(unsub_str));
     }
     
     current_subscriptions_ = scheduled_subscriptions_;
