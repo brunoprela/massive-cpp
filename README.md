@@ -25,8 +25,8 @@ include(FetchContent)
 
 FetchContent_Declare(
     massive-cpp
-    GIT_REPOSITORY https://github.com/your-org/massive-cpp.git
-    GIT_TAG v0.1.0
+    GIT_REPOSITORY https://github.com/brunoprela/massive-cpp.git
+    GIT_TAG main
 )
 
 FetchContent_MakeAvailable(massive-cpp)
@@ -37,7 +37,7 @@ target_link_libraries(your_target PRIVATE massive::rest massive::websocket)
 #### Method 2: System Installation
 
 ```bash
-git clone https://github.com/your-org/massive-cpp.git
+git clone https://github.com/brunoprela/massive-cpp.git
 cd massive-cpp
 mkdir build && cd build
 cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local
