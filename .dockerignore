@@ -1,9 +1,0 @@
-build/
-.git/
-.github/
-alpaca-cpp/
-massive-python/
-*.md
-.env
-.DS_Store
-

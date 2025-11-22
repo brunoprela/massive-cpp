@@ -15,21 +15,6 @@ out/
 *~
 .DS_Store
 
-# Coverage
-*.gcov
-*.gcda
-*.gcno
-coverage.info
-coverage/
-
-# Documentation
-docs/html/
-docs/latex/
-
-# Dependencies
-deps/
-third_party/
-
 # Environment
 .env
 .env.local

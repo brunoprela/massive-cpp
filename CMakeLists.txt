@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-option(MASSIVE_BUILD_TESTS "Build unit tests" ON)
 option(MASSIVE_ENABLE_WARNINGS "Enable recommended warnings" ON)
 option(MASSIVE_VENDOR_DEPS "Fetch required third-party dependencies" ON)
 
@@ -211,15 +210,18 @@ target_link_libraries(massive_websocket PUBLIC ${MASSIVE_SIMDJSON_TARGET} OpenSS
 
 add_library(massive::websocket ALIAS massive_websocket)
 
-# Example executables
-add_executable(massive_example_get_aggs examples/get_aggs.cpp)
-target_link_libraries(massive_example_get_aggs PRIVATE massive::rest)
+# Examples (optional)
+option(MASSIVE_BUILD_EXAMPLES "Build example programs" OFF)
+if(MASSIVE_BUILD_EXAMPLES)
+    add_executable(massive_example_get_aggs examples/get_aggs.cpp)
+    target_link_libraries(massive_example_get_aggs PRIVATE massive::rest)
 
-add_executable(massive_example_get_snapshot examples/get_snapshot.cpp)
-target_link_libraries(massive_example_get_snapshot PRIVATE massive::rest)
+    add_executable(massive_example_get_snapshot examples/get_snapshot.cpp)
+    target_link_libraries(massive_example_get_snapshot PRIVATE massive::rest)
 
-add_executable(massive_example_websocket examples/websocket_example.cpp)
-target_link_libraries(massive_example_websocket PRIVATE massive::websocket)
+    add_executable(massive_example_websocket examples/websocket_example.cpp)
+    target_link_libraries(massive_example_websocket PRIVATE massive::websocket)
+endif()
 
 # Installation support
 include(GNUInstallDirs)
@@ -271,32 +273,4 @@ install(FILES LICENSE
     DESTINATION ${CMAKE_INSTALL_DOCDIR}
 )
 
-# Tests
-if(MASSIVE_BUILD_TESTS)
-    add_subdirectory(tests)
-endif()
-
-# Benchmarks (optional)
-option(MASSIVE_BUILD_BENCHMARKS "Build benchmarks" OFF)
-if(MASSIVE_BUILD_BENCHMARKS)
-    add_subdirectory(benchmarks)
-endif()
-
-# Documentation (Doxygen)
-find_package(Doxygen QUIET)
-if(DOXYGEN_FOUND)
-    option(MASSIVE_BUILD_DOCS "Build API documentation" OFF)
-    if(MASSIVE_BUILD_DOCS)
-        set(DOXYGEN_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/docs)
-        set(DOXYGEN_PROJECT_VERSION ${PROJECT_VERSION})
-        configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in
-                       ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
-        add_custom_target(docs
-            COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
-            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-            COMMENT "Generating API documentation with Doxygen"
-            VERBATIM
-        )
-    endif()
-endif()
 
