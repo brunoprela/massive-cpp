@@ -1,7 +1,8 @@
 #!/bin/bash
 # Repository verification script - ensures everything works out of the box
 
-set -e
+# Don't exit on errors, count them instead
+set +e
 
 echo "🔍 Verifying massive-cpp repository setup..."
 echo ""
