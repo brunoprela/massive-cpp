@@ -30,7 +30,7 @@ std::vector<Agg> RESTClient::list_aggs(const std::string &ticker, int multiplier
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -103,18 +103,38 @@ std::vector<Agg> RESTClient::list_aggs(const std::string &ticker, int multiplier
 }
 
 std::vector<Trade> RESTClient::list_trades(const std::string &ticker,
-                                           std::optional<std::string> timestamp,
+                                           const std::optional<std::string> &timestamp,
+                                           const std::optional<std::string> &timestamp_lt,
+                                           const std::optional<std::string> &timestamp_lte,
+                                           const std::optional<std::string> &timestamp_gt,
+                                           const std::optional<std::string> &timestamp_gte,
                                            std::optional<int> limit,
-                                           std::optional<std::string> sort) {
+                                           const std::optional<std::string> &sort,
+                                           const std::optional<std::string> &order) {
     std::map<std::string, std::string> params;
     if (timestamp.has_value()) {
         params["timestamp"] = timestamp.value();
+    }
+    if (timestamp_lt.has_value()) {
+        params["timestamp.lt"] = timestamp_lt.value();
+    }
+    if (timestamp_lte.has_value()) {
+        params["timestamp.lte"] = timestamp_lte.value();
+    }
+    if (timestamp_gt.has_value()) {
+        params["timestamp.gt"] = timestamp_gt.value();
+    }
+    if (timestamp_gte.has_value()) {
+        params["timestamp.gte"] = timestamp_gte.value();
     }
     if (limit.has_value()) {
         params["limit"] = std::to_string(limit.value());
     }
     if (sort.has_value()) {
         params["sort"] = sort.value();
+    }
+    if (order.has_value()) {
+        params["order"] = order.value();
     }
 
     std::string path = "/v3/trades/" + ticker;
@@ -127,7 +147,7 @@ std::vector<Trade> RESTClient::list_trades(const std::string &ticker,
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -179,7 +199,7 @@ LastTrade RESTClient::get_last_trade(const std::string &ticker) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -218,18 +238,38 @@ LastTrade RESTClient::get_last_trade(const std::string &ticker) {
 }
 
 std::vector<Quote> RESTClient::list_quotes(const std::string &ticker,
-                                           std::optional<std::string> timestamp,
+                                           const std::optional<std::string> &timestamp,
+                                           const std::optional<std::string> &timestamp_lt,
+                                           const std::optional<std::string> &timestamp_lte,
+                                           const std::optional<std::string> &timestamp_gt,
+                                           const std::optional<std::string> &timestamp_gte,
                                            std::optional<int> limit,
-                                           std::optional<std::string> sort) {
+                                           const std::optional<std::string> &sort,
+                                           const std::optional<std::string> &order) {
     std::map<std::string, std::string> params;
     if (timestamp.has_value()) {
         params["timestamp"] = timestamp.value();
+    }
+    if (timestamp_lt.has_value()) {
+        params["timestamp.lt"] = timestamp_lt.value();
+    }
+    if (timestamp_lte.has_value()) {
+        params["timestamp.lte"] = timestamp_lte.value();
+    }
+    if (timestamp_gt.has_value()) {
+        params["timestamp.gt"] = timestamp_gt.value();
+    }
+    if (timestamp_gte.has_value()) {
+        params["timestamp.gte"] = timestamp_gte.value();
     }
     if (limit.has_value()) {
         params["limit"] = std::to_string(limit.value());
     }
     if (sort.has_value()) {
         params["sort"] = sort.value();
+    }
+    if (order.has_value()) {
+        params["order"] = order.value();
     }
 
     std::string path = "/v3/quotes/" + ticker;
@@ -241,7 +281,7 @@ std::vector<Quote> RESTClient::list_quotes(const std::string &ticker,
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -293,7 +333,7 @@ LastQuote RESTClient::get_last_quote(const std::string &ticker) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -353,7 +393,7 @@ std::vector<GroupedDailyAgg> RESTClient::get_grouped_daily_aggs(const std::strin
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -447,7 +487,7 @@ DailyOpenCloseAgg RESTClient::get_daily_open_close_agg(const std::string &ticker
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -530,7 +570,7 @@ PreviousCloseAgg RESTClient::get_previous_close_agg(const std::string &ticker,
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -618,7 +658,7 @@ std::vector<Agg> RESTClient::get_aggs(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");

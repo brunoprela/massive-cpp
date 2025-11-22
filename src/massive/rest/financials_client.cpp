@@ -102,7 +102,7 @@ std::vector<BalanceSheet> RESTClient::list_balance_sheets(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -265,7 +265,7 @@ std::vector<IncomeStatement> RESTClient::list_income_statements(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -402,7 +402,7 @@ std::vector<CashFlowStatement> RESTClient::list_cash_flow_statements(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -647,7 +647,7 @@ std::vector<FinancialRatios> RESTClient::list_financial_ratios(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");

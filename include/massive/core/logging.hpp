@@ -52,12 +52,12 @@ private:
 // Null logger (no-op implementation)
 class NullLogger : public ILogger {
 public:
-    void log(LogLevel level, const std::string& message) override {}
-    void debug(const std::string& message) override {}
-    void info(const std::string& message) override {}
-    void warn(const std::string& message) override {}
-    void error(const std::string& message) override {}
-    void set_level(LogLevel level) override {}
+    void log(LogLevel /*level*/, const std::string& /*message*/) override {}
+    void debug(const std::string& /*message*/) override {}
+    void info(const std::string& /*message*/) override {}
+    void warn(const std::string& /*message*/) override {}
+    void error(const std::string& /*message*/) override {}
+    void set_level(LogLevel /*level*/) override {}
     LogLevel level() const override { return LogLevel::NONE; }
 };
 
@@ -67,25 +67,25 @@ std::shared_ptr<ILogger> create_null_logger();
 
 // Convenience macros for logging
 #define MASSIVE_LOG_DEBUG(logger, msg) \
-    do { if (logger && logger->level() <= LogLevel::DEBUG) { \
+    do { if (logger && logger->level() <= massive::core::LogLevel::DEBUG) { \
         std::ostringstream oss; oss << msg; \
         logger->debug(oss.str()); \
     } } while(0)
 
 #define MASSIVE_LOG_INFO(logger, msg) \
-    do { if (logger && logger->level() <= LogLevel::INFO) { \
+    do { if (logger && logger->level() <= massive::core::LogLevel::INFO) { \
         std::ostringstream oss; oss << msg; \
         logger->info(oss.str()); \
     } } while(0)
 
 #define MASSIVE_LOG_WARN(logger, msg) \
-    do { if (logger && logger->level() <= LogLevel::WARN) { \
+    do { if (logger && logger->level() <= massive::core::LogLevel::WARN) { \
         std::ostringstream oss; oss << msg; \
         logger->warn(oss.str()); \
     } } while(0)
 
 #define MASSIVE_LOG_ERROR(logger, msg) \
-    do { if (logger && logger->level() <= LogLevel::ERROR) { \
+    do { if (logger && logger->level() <= massive::core::LogLevel::ERROR) { \
         std::ostringstream oss; oss << msg; \
         logger->error(oss.str()); \
     } } while(0)

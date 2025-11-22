@@ -27,7 +27,7 @@ RESTClient::get_summaries(const std::vector<std::string> &ticker_any_of) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");

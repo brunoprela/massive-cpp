@@ -30,7 +30,7 @@ std::vector<TmxTrade> RESTClient::list_tmx_trades(const std::string &ticker,
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -88,7 +88,7 @@ TmxTrade RESTClient::get_tmx_last_trade(const std::string &ticker) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -152,7 +152,7 @@ std::vector<TmxQuote> RESTClient::list_tmx_quotes(const std::string &ticker,
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -210,7 +210,7 @@ TmxQuote RESTClient::get_tmx_last_quote(const std::string &ticker) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -276,7 +276,7 @@ std::vector<TmxAgg> RESTClient::list_tmx_aggs(const std::string &ticker, int mul
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -350,7 +350,7 @@ TmxTickerDetails RESTClient::get_tmx_ticker_details(const std::string &ticker) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -456,7 +456,7 @@ std::vector<TmxCorporateEvent> RESTClient::list_tmx_corporate_events(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");

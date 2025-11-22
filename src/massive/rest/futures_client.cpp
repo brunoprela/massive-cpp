@@ -26,7 +26,7 @@ RESTClient::list_futures_aggregates(const std::string &ticker,
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -98,7 +98,7 @@ FuturesContract RESTClient::get_futures_contract_details(const std::string &tick
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -176,7 +176,7 @@ RESTClient::list_futures_contracts(const std::optional<std::string> &product_cod
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -240,7 +240,7 @@ std::vector<FuturesQuote> RESTClient::list_futures_quotes(const std::string &tic
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -303,7 +303,7 @@ std::vector<FuturesTrade> RESTClient::list_futures_trades(const std::string &tic
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -386,7 +386,7 @@ std::vector<FuturesProduct> RESTClient::list_futures_products(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -463,7 +463,7 @@ FuturesProduct RESTClient::get_futures_product_details(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -521,7 +521,7 @@ FuturesSchedule RESTClient::get_futures_schedule(const std::string& ticker) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -577,7 +577,7 @@ FuturesMarketStatus RESTClient::get_futures_market_status() {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -619,7 +619,7 @@ FuturesSnapshot RESTClient::get_futures_snapshot(const std::string& ticker) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -707,7 +707,7 @@ std::vector<FuturesExchange> RESTClient::list_futures_exchanges() {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -787,7 +787,7 @@ std::vector<FuturesSchedule> RESTClient::list_futures_schedules(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -814,10 +814,6 @@ std::vector<FuturesSchedule> RESTClient::list_futures_schedules(
                         schedule.session_close = std::string(session_close_field.value().get_string().value());
                     }
 
-                    auto session_end_date_field = obj.find_field_unordered("session_end_date");
-                    if (!session_end_date_field.error()) {
-                        schedule.session_end_date = std::string(session_end_date_field.value().get_string().value());
-                    }
 
                     results.push_back(schedule);
                 }
@@ -870,7 +866,7 @@ std::vector<FuturesSchedule> RESTClient::list_futures_schedules_by_product_code(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -897,10 +893,6 @@ std::vector<FuturesSchedule> RESTClient::list_futures_schedules_by_product_code(
                         schedule.session_close = std::string(session_close_field.value().get_string().value());
                     }
 
-                    auto session_end_date_field = obj.find_field_unordered("session_end_date");
-                    if (!session_end_date_field.error()) {
-                        schedule.session_end_date = std::string(session_end_date_field.value().get_string().value());
-                    }
 
                     results.push_back(schedule);
                 }
@@ -940,7 +932,7 @@ std::vector<FuturesMarketStatus> RESTClient::list_futures_market_statuses(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -954,27 +946,27 @@ std::vector<FuturesMarketStatus> RESTClient::list_futures_market_statuses(
             for (auto result_elem : results_array.value()) {
                 auto obj_result = result_elem.get_object();
                 if (!obj_result.error()) {
-                    auto obj = obj_result.value();
+                    auto& obj = obj_result.value();
                     FuturesMarketStatus status;
 
-                    auto market_status_field = obj.find_field_unordered("market_status");
-                    if (!market_status_field.error()) {
-                        status.market_status = std::string(market_status_field.value().get_string().value());
+                    auto market_field = obj.find_field_unordered("market");
+                    if (!market_field.error()) {
+                        status.market = std::string(market_field.value().get_string().value());
                     }
 
-                    auto product_code_field = obj.find_field_unordered("product_code");
-                    if (!product_code_field.error()) {
-                        status.product_code = std::string(product_code_field.value().get_string().value());
+                    auto server_time_field = obj.find_field_unordered("server_time");
+                    if (!server_time_field.error()) {
+                        status.server_time = std::string(server_time_field.value().get_string().value());
                     }
 
-                    auto session_open_field = obj.find_field_unordered("session_open");
-                    if (!session_open_field.error()) {
-                        status.session_open = std::string(session_open_field.value().get_string().value());
+                    auto exchanges_field = obj.find_field_unordered("exchanges");
+                    if (!exchanges_field.error()) {
+                        status.exchanges = std::string(exchanges_field.value().get_string().value());
                     }
 
-                    auto session_close_field = obj.find_field_unordered("session_close");
-                    if (!session_close_field.error()) {
-                        status.session_close = std::string(session_close_field.value().get_string().value());
+                    auto currencies_field = obj.find_field_unordered("currencies");
+                    if (!currencies_field.error()) {
+                        status.currencies = std::string(currencies_field.value().get_string().value());
                     }
 
                     results.push_back(status);

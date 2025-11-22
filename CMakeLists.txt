@@ -124,11 +124,16 @@ if(MASSIVE_VENDOR_DEPS)
         GIT_TAG v3.9.2)
     FetchContent_MakeAvailable(simdjson)
     set(MASSIVE_SIMDJSON_TARGET simdjson)
+    set(MASSIVE_SIMDJSON_INCLUDE_DIR ${simdjson_SOURCE_DIR}/include)
 else()
     find_package(Boost REQUIRED)
     find_package(simdjson CONFIG REQUIRED)
     set(MASSIVE_BOOST_INCLUDE_DIR ${Boost_INCLUDE_DIRS})
     set(MASSIVE_SIMDJSON_TARGET simdjson::simdjson)
+    get_target_property(MASSIVE_SIMDJSON_INCLUDE_DIR ${MASSIVE_SIMDJSON_TARGET} INTERFACE_INCLUDE_DIRECTORIES)
+    if(NOT MASSIVE_SIMDJSON_INCLUDE_DIR)
+        get_target_property(MASSIVE_SIMDJSON_INCLUDE_DIR ${MASSIVE_SIMDJSON_TARGET} INTERFACE_SYSTEM_INCLUDE_DIRECTORIES)
+    endif()
     set(BOOST_URL_SOURCES)
 endif()
 
@@ -146,8 +151,15 @@ add_library(massive_core
 target_include_directories(massive_core
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:include>
-        $<BUILD_INTERFACE:${MASSIVE_BOOST_INCLUDE_DIR}>)
+        $<INSTALL_INTERFACE:include>)
+if(MASSIVE_VENDOR_DEPS)
+    if(MASSIVE_BOOST_INCLUDE_DIR)
+        target_include_directories(massive_core SYSTEM PRIVATE $<BUILD_INTERFACE:${MASSIVE_BOOST_INCLUDE_DIR}>)
+    endif()
+    if(MASSIVE_SIMDJSON_INCLUDE_DIR)
+        target_include_directories(massive_core SYSTEM PRIVATE $<BUILD_INTERFACE:${MASSIVE_SIMDJSON_INCLUDE_DIR}>)
+    endif()
+endif()
 target_compile_features(massive_core PUBLIC cxx_std_20)
 target_link_libraries(massive_core PUBLIC ${MASSIVE_SIMDJSON_TARGET} OpenSSL::SSL OpenSSL::Crypto)
 
@@ -176,9 +188,13 @@ add_library(massive_rest
     src/massive/rest/request_options.cpp)
 target_link_libraries(massive_rest PUBLIC massive::core)
 if(MASSIVE_VENDOR_DEPS)
-    target_include_directories(massive_rest PUBLIC 
-        $<BUILD_INTERFACE:${MASSIVE_BOOST_INCLUDE_DIR}>
-        $<INSTALL_INTERFACE:include>)
+    target_include_directories(massive_rest PUBLIC $<INSTALL_INTERFACE:include>)
+    if(MASSIVE_BOOST_INCLUDE_DIR)
+        target_include_directories(massive_rest SYSTEM PRIVATE $<BUILD_INTERFACE:${MASSIVE_BOOST_INCLUDE_DIR}>)
+    endif()
+    if(MASSIVE_SIMDJSON_INCLUDE_DIR)
+        target_include_directories(massive_rest SYSTEM PRIVATE $<BUILD_INTERFACE:${MASSIVE_SIMDJSON_INCLUDE_DIR}>)
+    endif()
 else()
     target_link_libraries(massive_rest PUBLIC Boost::boost)
 endif()
@@ -195,9 +211,13 @@ add_library(massive_websocket
     src/massive/websocket/client.cpp)
 target_link_libraries(massive_websocket PUBLIC massive::core)
 if(MASSIVE_VENDOR_DEPS)
-    target_include_directories(massive_websocket PUBLIC 
-        $<BUILD_INTERFACE:${MASSIVE_BOOST_INCLUDE_DIR}>
-        $<INSTALL_INTERFACE:include>)
+    target_include_directories(massive_websocket PUBLIC $<INSTALL_INTERFACE:include>)
+    if(MASSIVE_BOOST_INCLUDE_DIR)
+        target_include_directories(massive_websocket SYSTEM PRIVATE $<BUILD_INTERFACE:${MASSIVE_BOOST_INCLUDE_DIR}>)
+    endif()
+    if(MASSIVE_SIMDJSON_INCLUDE_DIR)
+        target_include_directories(massive_websocket SYSTEM PRIVATE $<BUILD_INTERFACE:${MASSIVE_SIMDJSON_INCLUDE_DIR}>)
+    endif()
 else()
     target_link_libraries(massive_websocket PUBLIC Boost::boost)
 endif()

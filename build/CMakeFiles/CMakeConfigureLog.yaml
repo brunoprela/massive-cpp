@@ -1381,8 +1381,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-OSlxxQ"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-OSlxxQ"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-LoIQW2"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-LoIQW2"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1395,19 +1395,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-OSlxxQ'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-LoIQW2'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_afe52/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_afe52.dir/build.make CMakeFiles/cmTC_afe52.dir/build
-        Building CXX object CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_49959/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_49959.dir/build.make CMakeFiles/cmTC_49959.dir/build
+        Building CXX object CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin25.1.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"
-         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.5.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-OSlxxQ -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-OSlxxQ -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.5.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-LoIQW2 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-LoIQW2 -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin25.1.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
@@ -1421,13 +1421,13 @@ events:
          /Library/Developer/CommandLineTools/usr/include
          /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_afe52
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_afe52.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_49959
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49959.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin25.1.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
-         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.5.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_afe52 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.5.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_49959 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1167.5
         BUILD 01:45:05 Apr 30 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -1439,7 +1439,7 @@ events:
         	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_afe52
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_49959
         
       exitCode: 0
   -
@@ -1483,19 +1483,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-OSlxxQ']
+        ignore line: [Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-LoIQW2']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_afe52/fast]
-        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_afe52.dir/build.make CMakeFiles/cmTC_afe52.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_49959/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_49959.dir/build.make CMakeFiles/cmTC_49959.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin25.1.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.5.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-OSlxxQ -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-OSlxxQ -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.5.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-LoIQW2 -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-LoIQW2 -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin25.1.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
@@ -1509,13 +1509,13 @@ events:
         ignore line: [ /Library/Developer/CommandLineTools/usr/include]
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_afe52]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_afe52.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_49959]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49959.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin25.1.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.5.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_afe52 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.5.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_49959 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
           arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1532,12 +1532,12 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_afe52] ==> ignore
+          arg [cmTC_49959] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_afe52.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_49959.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
@@ -1577,12 +1577,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wall"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-xMrbWn"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-xMrbWn"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-VGgy0T"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-VGgy0T"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1595,20 +1595,20 @@ events:
       variable: "HAS_-Wall"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-xMrbWn'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-VGgy0T'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a34c3/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a34c3.dir/build.make CMakeFiles/cmTC_a34c3.dir/build
-        Building CXX object CMakeFiles/cmTC_a34c3.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wall -Wall -MD -MT CMakeFiles/cmTC_a34c3.dir/src.cxx.o -MF CMakeFiles/cmTC_a34c3.dir/src.cxx.o.d -o CMakeFiles/cmTC_a34c3.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-xMrbWn/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_75f2e/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_75f2e.dir/build.make CMakeFiles/cmTC_75f2e.dir/build
+        Building CXX object CMakeFiles/cmTC_75f2e.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wall -Wall -MD -MT CMakeFiles/cmTC_75f2e.dir/src.cxx.o -MF CMakeFiles/cmTC_75f2e.dir/src.cxx.o.d -o CMakeFiles/cmTC_75f2e.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-VGgy0T/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wall 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_a34c3
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a34c3.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a34c3.dir/src.cxx.o -o cmTC_a34c3
+        Linking CXX executable cmTC_75f2e
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75f2e.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_75f2e.dir/src.cxx.o -o cmTC_75f2e
         
       exitCode: 0
   -
@@ -1617,12 +1617,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wextra"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-NSCDKy"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-NSCDKy"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-yTavFU"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-yTavFU"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1635,20 +1635,20 @@ events:
       variable: "HAS_-Wextra"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-NSCDKy'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-yTavFU'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fcd15/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fcd15.dir/build.make CMakeFiles/cmTC_fcd15.dir/build
-        Building CXX object CMakeFiles/cmTC_fcd15.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wextra -Wextra -MD -MT CMakeFiles/cmTC_fcd15.dir/src.cxx.o -MF CMakeFiles/cmTC_fcd15.dir/src.cxx.o.d -o CMakeFiles/cmTC_fcd15.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-NSCDKy/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_92077/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_92077.dir/build.make CMakeFiles/cmTC_92077.dir/build
+        Building CXX object CMakeFiles/cmTC_92077.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wextra -Wextra -MD -MT CMakeFiles/cmTC_92077.dir/src.cxx.o -MF CMakeFiles/cmTC_92077.dir/src.cxx.o.d -o CMakeFiles/cmTC_92077.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-yTavFU/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wextra 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_fcd15
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fcd15.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_fcd15.dir/src.cxx.o -o cmTC_fcd15
+        Linking CXX executable cmTC_92077
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92077.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_92077.dir/src.cxx.o -o cmTC_92077
         
       exitCode: 0
   -
@@ -1657,12 +1657,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wshadow"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-sZ7Hmy"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-sZ7Hmy"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-p7BODF"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-p7BODF"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1675,20 +1675,20 @@ events:
       variable: "HAS_-Wshadow"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-sZ7Hmy'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-p7BODF'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f8c42/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f8c42.dir/build.make CMakeFiles/cmTC_f8c42.dir/build
-        Building CXX object CMakeFiles/cmTC_f8c42.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wshadow -Wshadow -MD -MT CMakeFiles/cmTC_f8c42.dir/src.cxx.o -MF CMakeFiles/cmTC_f8c42.dir/src.cxx.o.d -o CMakeFiles/cmTC_f8c42.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-sZ7Hmy/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_20be9/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_20be9.dir/build.make CMakeFiles/cmTC_20be9.dir/build
+        Building CXX object CMakeFiles/cmTC_20be9.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wshadow -Wshadow -MD -MT CMakeFiles/cmTC_20be9.dir/src.cxx.o -MF CMakeFiles/cmTC_20be9.dir/src.cxx.o.d -o CMakeFiles/cmTC_20be9.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-p7BODF/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wshadow 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_f8c42
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8c42.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f8c42.dir/src.cxx.o -o cmTC_f8c42
+        Linking CXX executable cmTC_20be9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20be9.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_20be9.dir/src.cxx.o -o cmTC_20be9
         
       exitCode: 0
   -
@@ -1697,12 +1697,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wnon-virtual-dtor"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-2jIYZa"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-2jIYZa"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-zoTSA2"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-zoTSA2"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1715,20 +1715,20 @@ events:
       variable: "HAS_-Wnon-virtual-dtor"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-2jIYZa'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-zoTSA2'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9ef80/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9ef80.dir/build.make CMakeFiles/cmTC_9ef80.dir/build
-        Building CXX object CMakeFiles/cmTC_9ef80.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wnon-virtual-dtor -Wnon-virtual-dtor -MD -MT CMakeFiles/cmTC_9ef80.dir/src.cxx.o -MF CMakeFiles/cmTC_9ef80.dir/src.cxx.o.d -o CMakeFiles/cmTC_9ef80.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-2jIYZa/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_27a8e/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_27a8e.dir/build.make CMakeFiles/cmTC_27a8e.dir/build
+        Building CXX object CMakeFiles/cmTC_27a8e.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wnon-virtual-dtor -Wnon-virtual-dtor -MD -MT CMakeFiles/cmTC_27a8e.dir/src.cxx.o -MF CMakeFiles/cmTC_27a8e.dir/src.cxx.o.d -o CMakeFiles/cmTC_27a8e.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-zoTSA2/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wnon-virtual-dtor 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_9ef80
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ef80.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9ef80.dir/src.cxx.o -o cmTC_9ef80
+        Linking CXX executable cmTC_27a8e
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27a8e.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_27a8e.dir/src.cxx.o -o cmTC_27a8e
         
       exitCode: 0
   -
@@ -1737,12 +1737,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wold-style-cast"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-MpIsp3"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-MpIsp3"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YvM4AN"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YvM4AN"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1755,20 +1755,20 @@ events:
       variable: "HAS_-Wold-style-cast"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-MpIsp3'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YvM4AN'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d0994/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d0994.dir/build.make CMakeFiles/cmTC_d0994.dir/build
-        Building CXX object CMakeFiles/cmTC_d0994.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wold-style-cast -Wold-style-cast -MD -MT CMakeFiles/cmTC_d0994.dir/src.cxx.o -MF CMakeFiles/cmTC_d0994.dir/src.cxx.o.d -o CMakeFiles/cmTC_d0994.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-MpIsp3/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_75054/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_75054.dir/build.make CMakeFiles/cmTC_75054.dir/build
+        Building CXX object CMakeFiles/cmTC_75054.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wold-style-cast -Wold-style-cast -MD -MT CMakeFiles/cmTC_75054.dir/src.cxx.o -MF CMakeFiles/cmTC_75054.dir/src.cxx.o.d -o CMakeFiles/cmTC_75054.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YvM4AN/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wold-style-cast 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_d0994
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0994.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d0994.dir/src.cxx.o -o cmTC_d0994
+        Linking CXX executable cmTC_75054
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75054.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_75054.dir/src.cxx.o -o cmTC_75054
         
       exitCode: 0
   -
@@ -1777,12 +1777,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wcast-align"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-MRv5pA"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-MRv5pA"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-EtML3g"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-EtML3g"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1795,20 +1795,20 @@ events:
       variable: "HAS_-Wcast-align"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-MRv5pA'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-EtML3g'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e05b0/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e05b0.dir/build.make CMakeFiles/cmTC_e05b0.dir/build
-        Building CXX object CMakeFiles/cmTC_e05b0.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wcast-align -Wcast-align -MD -MT CMakeFiles/cmTC_e05b0.dir/src.cxx.o -MF CMakeFiles/cmTC_e05b0.dir/src.cxx.o.d -o CMakeFiles/cmTC_e05b0.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-MRv5pA/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ede92/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ede92.dir/build.make CMakeFiles/cmTC_ede92.dir/build
+        Building CXX object CMakeFiles/cmTC_ede92.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wcast-align -Wcast-align -MD -MT CMakeFiles/cmTC_ede92.dir/src.cxx.o -MF CMakeFiles/cmTC_ede92.dir/src.cxx.o.d -o CMakeFiles/cmTC_ede92.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-EtML3g/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wcast-align 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_e05b0
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e05b0.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e05b0.dir/src.cxx.o -o cmTC_e05b0
+        Linking CXX executable cmTC_ede92
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ede92.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_ede92.dir/src.cxx.o -o cmTC_ede92
         
       exitCode: 0
   -
@@ -1817,12 +1817,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wunused"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-tdtmBO"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-tdtmBO"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bFwrSo"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bFwrSo"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1835,20 +1835,20 @@ events:
       variable: "HAS_-Wunused"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-tdtmBO'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bFwrSo'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_aff07/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_aff07.dir/build.make CMakeFiles/cmTC_aff07.dir/build
-        Building CXX object CMakeFiles/cmTC_aff07.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wunused -Wunused -MD -MT CMakeFiles/cmTC_aff07.dir/src.cxx.o -MF CMakeFiles/cmTC_aff07.dir/src.cxx.o.d -o CMakeFiles/cmTC_aff07.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-tdtmBO/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_98b42/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_98b42.dir/build.make CMakeFiles/cmTC_98b42.dir/build
+        Building CXX object CMakeFiles/cmTC_98b42.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wunused -Wunused -MD -MT CMakeFiles/cmTC_98b42.dir/src.cxx.o -MF CMakeFiles/cmTC_98b42.dir/src.cxx.o.d -o CMakeFiles/cmTC_98b42.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bFwrSo/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wunused 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_aff07
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aff07.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_aff07.dir/src.cxx.o -o cmTC_aff07
+        Linking CXX executable cmTC_98b42
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98b42.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_98b42.dir/src.cxx.o -o cmTC_98b42
         
       exitCode: 0
   -
@@ -1857,12 +1857,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Woverloaded-virtual"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-GigoEX"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-GigoEX"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-cvBGuL"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-cvBGuL"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1875,20 +1875,20 @@ events:
       variable: "HAS_-Woverloaded-virtual"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-GigoEX'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-cvBGuL'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_df03b/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_df03b.dir/build.make CMakeFiles/cmTC_df03b.dir/build
-        Building CXX object CMakeFiles/cmTC_df03b.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Woverloaded-virtual -Woverloaded-virtual -MD -MT CMakeFiles/cmTC_df03b.dir/src.cxx.o -MF CMakeFiles/cmTC_df03b.dir/src.cxx.o.d -o CMakeFiles/cmTC_df03b.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-GigoEX/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7fe62/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7fe62.dir/build.make CMakeFiles/cmTC_7fe62.dir/build
+        Building CXX object CMakeFiles/cmTC_7fe62.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Woverloaded-virtual -Woverloaded-virtual -MD -MT CMakeFiles/cmTC_7fe62.dir/src.cxx.o -MF CMakeFiles/cmTC_7fe62.dir/src.cxx.o.d -o CMakeFiles/cmTC_7fe62.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-cvBGuL/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Woverloaded-virtual 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_df03b
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df03b.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_df03b.dir/src.cxx.o -o cmTC_df03b
+        Linking CXX executable cmTC_7fe62
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7fe62.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7fe62.dir/src.cxx.o -o cmTC_7fe62
         
       exitCode: 0
   -
@@ -1897,12 +1897,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-pedantic"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-nerXk6"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-nerXk6"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-lsccfU"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-lsccfU"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1915,20 +1915,20 @@ events:
       variable: "HAS_-pedantic"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-nerXk6'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-lsccfU'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8b130/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8b130.dir/build.make CMakeFiles/cmTC_8b130.dir/build
-        Building CXX object CMakeFiles/cmTC_8b130.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-pedantic -pedantic -MD -MT CMakeFiles/cmTC_8b130.dir/src.cxx.o -MF CMakeFiles/cmTC_8b130.dir/src.cxx.o.d -o CMakeFiles/cmTC_8b130.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-nerXk6/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7f7c9/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7f7c9.dir/build.make CMakeFiles/cmTC_7f7c9.dir/build
+        Building CXX object CMakeFiles/cmTC_7f7c9.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-pedantic -pedantic -MD -MT CMakeFiles/cmTC_7f7c9.dir/src.cxx.o -MF CMakeFiles/cmTC_7f7c9.dir/src.cxx.o.d -o CMakeFiles/cmTC_7f7c9.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-lsccfU/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-pedantic 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_8b130
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b130.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8b130.dir/src.cxx.o -o cmTC_8b130
+        Linking CXX executable cmTC_7f7c9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f7c9.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_7f7c9.dir/src.cxx.o -o cmTC_7f7c9
         
       exitCode: 0
   -
@@ -1937,12 +1937,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wconversion"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-eWYLde"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-eWYLde"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-FwSmEn"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-FwSmEn"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1955,20 +1955,20 @@ events:
       variable: "HAS_-Wconversion"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-eWYLde'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-FwSmEn'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a3588/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a3588.dir/build.make CMakeFiles/cmTC_a3588.dir/build
-        Building CXX object CMakeFiles/cmTC_a3588.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wconversion -Wconversion -MD -MT CMakeFiles/cmTC_a3588.dir/src.cxx.o -MF CMakeFiles/cmTC_a3588.dir/src.cxx.o.d -o CMakeFiles/cmTC_a3588.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-eWYLde/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_08195/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_08195.dir/build.make CMakeFiles/cmTC_08195.dir/build
+        Building CXX object CMakeFiles/cmTC_08195.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wconversion -Wconversion -MD -MT CMakeFiles/cmTC_08195.dir/src.cxx.o -MF CMakeFiles/cmTC_08195.dir/src.cxx.o.d -o CMakeFiles/cmTC_08195.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-FwSmEn/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wconversion 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_a3588
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3588.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a3588.dir/src.cxx.o -o cmTC_a3588
+        Linking CXX executable cmTC_08195
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08195.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_08195.dir/src.cxx.o -o cmTC_08195
         
       exitCode: 0
   -
@@ -1977,12 +1977,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wsign-conversion"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-6njcEA"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-6njcEA"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-3p7aKf"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-3p7aKf"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1995,20 +1995,20 @@ events:
       variable: "HAS_-Wsign-conversion"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-6njcEA'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-3p7aKf'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1d542/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1d542.dir/build.make CMakeFiles/cmTC_1d542.dir/build
-        Building CXX object CMakeFiles/cmTC_1d542.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wsign-conversion -Wsign-conversion -MD -MT CMakeFiles/cmTC_1d542.dir/src.cxx.o -MF CMakeFiles/cmTC_1d542.dir/src.cxx.o.d -o CMakeFiles/cmTC_1d542.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-6njcEA/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3ecb9/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_3ecb9.dir/build.make CMakeFiles/cmTC_3ecb9.dir/build
+        Building CXX object CMakeFiles/cmTC_3ecb9.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wsign-conversion -Wsign-conversion -MD -MT CMakeFiles/cmTC_3ecb9.dir/src.cxx.o -MF CMakeFiles/cmTC_3ecb9.dir/src.cxx.o.d -o CMakeFiles/cmTC_3ecb9.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-3p7aKf/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wsign-conversion 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_1d542
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d542.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_1d542.dir/src.cxx.o -o cmTC_1d542
+        Linking CXX executable cmTC_3ecb9
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ecb9.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_3ecb9.dir/src.cxx.o -o cmTC_3ecb9
         
       exitCode: 0
   -
@@ -2017,12 +2017,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wnull-dereference"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-ugKjl3"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-ugKjl3"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-GDogXF"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-GDogXF"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2035,20 +2035,20 @@ events:
       variable: "HAS_-Wnull-dereference"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-ugKjl3'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-GDogXF'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4adb5/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4adb5.dir/build.make CMakeFiles/cmTC_4adb5.dir/build
-        Building CXX object CMakeFiles/cmTC_4adb5.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wnull-dereference -Wnull-dereference -MD -MT CMakeFiles/cmTC_4adb5.dir/src.cxx.o -MF CMakeFiles/cmTC_4adb5.dir/src.cxx.o.d -o CMakeFiles/cmTC_4adb5.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-ugKjl3/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_71244/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_71244.dir/build.make CMakeFiles/cmTC_71244.dir/build
+        Building CXX object CMakeFiles/cmTC_71244.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wnull-dereference -Wnull-dereference -MD -MT CMakeFiles/cmTC_71244.dir/src.cxx.o -MF CMakeFiles/cmTC_71244.dir/src.cxx.o.d -o CMakeFiles/cmTC_71244.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-GDogXF/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wnull-dereference 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_4adb5
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4adb5.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_4adb5.dir/src.cxx.o -o cmTC_4adb5
+        Linking CXX executable cmTC_71244
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71244.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_71244.dir/src.cxx.o -o cmTC_71244
         
       exitCode: 0
   -
@@ -2057,12 +2057,12 @@ events:
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
       - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
       - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "CMakeLists.txt:31 (check_cxx_compiler_flag)"
+      - "CMakeLists.txt:30 (check_cxx_compiler_flag)"
     checks:
       - "Performing Test HAS_-Wdouble-promotion"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-2rEial"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-2rEial"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-etmxfP"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-etmxfP"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2075,20 +2075,20 @@ events:
       variable: "HAS_-Wdouble-promotion"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-2rEial'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-etmxfP'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8b77f/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8b77f.dir/build.make CMakeFiles/cmTC_8b77f.dir/build
-        Building CXX object CMakeFiles/cmTC_8b77f.dir/src.cxx.o
-        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wdouble-promotion -Wdouble-promotion -MD -MT CMakeFiles/cmTC_8b77f.dir/src.cxx.o -MF CMakeFiles/cmTC_8b77f.dir/src.cxx.o.d -o CMakeFiles/cmTC_8b77f.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-2rEial/src.cxx
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5d17c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5d17c.dir/build.make CMakeFiles/cmTC_5d17c.dir/build
+        Building CXX object CMakeFiles/cmTC_5d17c.dir/src.cxx.o
+        /usr/bin/c++   -std=c++20 -arch arm64   -DHAS_-Wdouble-promotion -Wdouble-promotion -MD -MT CMakeFiles/cmTC_5d17c.dir/src.cxx.o -MF CMakeFiles/cmTC_5d17c.dir/src.cxx.o.d -o CMakeFiles/cmTC_5d17c.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-etmxfP/src.cxx
         In file included from <built-in>:543:
         <command line>:1:13: warning: ISO C99 requires whitespace after the macro name [-Wc99-extensions]
             1 | #define HAS_-Wdouble-promotion 1
               |             ^
         1 warning generated.
-        Linking CXX executable cmTC_8b77f
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b77f.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_8b77f.dir/src.cxx.o -o cmTC_8b77f
+        Linking CXX executable cmTC_5d17c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d17c.dir/link.txt --verbose=1
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_5d17c.dir/src.cxx.o -o cmTC_5d17c
         
       exitCode: 0
   -
@@ -2452,8 +2452,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-CqH75V"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-CqH75V"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bn0sji"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bn0sji"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2466,18 +2466,18 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-CqH75V'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bn0sji'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_88f71/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_88f71.dir/build.make CMakeFiles/cmTC_88f71.dir/build
-        Building C object CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6d5a5/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6d5a5.dir/build.make CMakeFiles/cmTC_6d5a5.dir/build
+        Building C object CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin25.1.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.5.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-CqH75V -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-CqH75V -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.5.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bn0sji -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bn0sji -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin25.1.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
@@ -2490,13 +2490,13 @@ events:
          /Library/Developer/CommandLineTools/usr/include
          /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-        Linking C executable cmTC_88f71
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88f71.dir/link.txt --verbose=1
+        Linking C executable cmTC_6d5a5
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d5a5.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.0.13.5)
         Target: arm64-apple-darwin25.1.0
         Thread model: posix
         InstalledDir: /Library/Developer/CommandLineTools/usr/bin
-         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.5.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_88f71 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+         "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.5.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_6d5a5 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1167.5
         BUILD 01:45:05 Apr 30 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -2508,7 +2508,7 @@ events:
         	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -o cmTC_88f71
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -o cmTC_6d5a5
         
       exitCode: 0
   -
@@ -2550,18 +2550,18 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-CqH75V']
+        ignore line: [Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bn0sji']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_88f71/fast]
-        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_88f71.dir/build.make CMakeFiles/cmTC_88f71.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6d5a5/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6d5a5.dir/build.make CMakeFiles/cmTC_6d5a5.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin25.1.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.5.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-CqH75V -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-CqH75V -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1 -triple arm64-apple-macosx15.5.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.5 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bn0sji -target-linker-version 1167.5 -v -fcoverage-compilation-dir=/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-bn0sji -resource-dir /Library/Developer/CommandLineTools/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Library/Developer/CommandLineTools/usr/lib/clang/17/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Library/Developer/CommandLineTools/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.0.13.5) default target arm64-apple-darwin25.1.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
@@ -2574,13 +2574,13 @@ events:
         ignore line: [ /Library/Developer/CommandLineTools/usr/include]
         ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_88f71]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88f71.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_6d5a5]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d5a5.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.0.13.5)]
         ignore line: [Target: arm64-apple-darwin25.1.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
-        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.5.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_88f71 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Library/Developer/CommandLineTools/usr/bin/ld" -demangle -lto_library /Library/Developer/CommandLineTools/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 15.5.0 15.5 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_6d5a5 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o -lSystem /Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
           arg [/Library/Developer/CommandLineTools/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -2597,12 +2597,12 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_88f71] ==> ignore
+          arg [cmTC_6d5a5] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_88f71.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_6d5a5.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/Library/Developer/CommandLineTools/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
         linker tool for 'C': /Library/Developer/CommandLineTools/usr/bin/ld
@@ -2645,8 +2645,8 @@ events:
     checks:
       - "Looking for fork"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-gFJL1M"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-gFJL1M"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-Fqnmlj"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-Fqnmlj"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2659,15 +2659,15 @@ events:
       variable: "HAVE_POSIX_FORK"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-gFJL1M'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-Fqnmlj'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d3a13/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d3a13.dir/build.make CMakeFiles/cmTC_d3a13.dir/build
-        Building C object CMakeFiles/cmTC_d3a13.dir/CheckSymbolExists.c.o
-        /usr/bin/cc   -arch arm64 -MD -MT CMakeFiles/cmTC_d3a13.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_d3a13.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_d3a13.dir/CheckSymbolExists.c.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-gFJL1M/CheckSymbolExists.c
-        Linking C executable cmTC_d3a13
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3a13.dir/link.txt --verbose=1
-        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_d3a13.dir/CheckSymbolExists.c.o -o cmTC_d3a13
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_170f8/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_170f8.dir/build.make CMakeFiles/cmTC_170f8.dir/build
+        Building C object CMakeFiles/cmTC_170f8.dir/CheckSymbolExists.c.o
+        /usr/bin/cc   -arch arm64 -MD -MT CMakeFiles/cmTC_170f8.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_170f8.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_170f8.dir/CheckSymbolExists.c.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-Fqnmlj/CheckSymbolExists.c
+        Linking C executable cmTC_170f8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_170f8.dir/link.txt --verbose=1
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_170f8.dir/CheckSymbolExists.c.o -o cmTC_170f8
         
       exitCode: 0
   -
@@ -2680,8 +2680,8 @@ events:
     checks:
       - "Looking for wait"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YyBaGW"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YyBaGW"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-Q2RzrX"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-Q2RzrX"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2694,15 +2694,15 @@ events:
       variable: "HAVE_POSIX_WAIT"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YyBaGW'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-Q2RzrX'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9cec7/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9cec7.dir/build.make CMakeFiles/cmTC_9cec7.dir/build
-        Building C object CMakeFiles/cmTC_9cec7.dir/CheckSymbolExists.c.o
-        /usr/bin/cc   -arch arm64 -MD -MT CMakeFiles/cmTC_9cec7.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_9cec7.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_9cec7.dir/CheckSymbolExists.c.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YyBaGW/CheckSymbolExists.c
-        Linking C executable cmTC_9cec7
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9cec7.dir/link.txt --verbose=1
-        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9cec7.dir/CheckSymbolExists.c.o -o cmTC_9cec7
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0c89c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_0c89c.dir/build.make CMakeFiles/cmTC_0c89c.dir/build
+        Building C object CMakeFiles/cmTC_0c89c.dir/CheckSymbolExists.c.o
+        /usr/bin/cc   -arch arm64 -MD -MT CMakeFiles/cmTC_0c89c.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_0c89c.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_0c89c.dir/CheckSymbolExists.c.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-Q2RzrX/CheckSymbolExists.c
+        Linking C executable cmTC_0c89c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c89c.dir/link.txt --verbose=1
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_0c89c.dir/CheckSymbolExists.c.o -o cmTC_0c89c
         
       exitCode: 0
   -
@@ -2716,8 +2716,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YL3MBV"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YL3MBV"
+      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-UGYu2q"
+      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-UGYu2q"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2730,15 +2730,15 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YL3MBV'
+        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-UGYu2q'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b4099/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b4099.dir/build.make CMakeFiles/cmTC_b4099.dir/build
-        Building C object CMakeFiles/cmTC_b4099.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -MD -MT CMakeFiles/cmTC_b4099.dir/src.c.o -MF CMakeFiles/cmTC_b4099.dir/src.c.o.d -o CMakeFiles/cmTC_b4099.dir/src.c.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-YL3MBV/src.c
-        Linking C executable cmTC_b4099
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4099.dir/link.txt --verbose=1
-        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_b4099.dir/src.c.o -o cmTC_b4099
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9275a/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9275a.dir/build.make CMakeFiles/cmTC_9275a.dir/build
+        Building C object CMakeFiles/cmTC_9275a.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch arm64 -MD -MT CMakeFiles/cmTC_9275a.dir/src.c.o -MF CMakeFiles/cmTC_9275a.dir/src.c.o.d -o CMakeFiles/cmTC_9275a.dir/src.c.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-UGYu2q/src.c
+        Linking C executable cmTC_9275a
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9275a.dir/link.txt --verbose=1
+        /usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_9275a.dir/src.c.o -o cmTC_9275a
         
       exitCode: 0
   -
@@ -2746,7 +2746,7 @@ events:
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:69 (find_program)"
       - "/opt/homebrew/share/cmake/Modules/FindOpenSSL.cmake:261 (find_package)"
-      - "CMakeLists.txt:135 (find_package)"
+      - "CMakeLists.txt:140 (find_package)"
     mode: "program"
     variable: "PKG_CONFIG_EXECUTABLE"
     description: "pkg-config executable"
@@ -2878,7 +2878,7 @@ events:
       - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
       - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
       - "/opt/homebrew/share/cmake/Modules/FindOpenSSL.cmake:263 (pkg_check_modules)"
-      - "CMakeLists.txt:135 (find_package)"
+      - "CMakeLists.txt:140 (find_package)"
     mode: "library"
     variable: "pkgcfg_lib__OPENSSL_ssl"
     description: "Path to a library."
@@ -2958,7 +2958,7 @@ events:
       - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:695 (_pkg_recalculate)"
       - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:867 (_pkg_check_modules_internal)"
       - "/opt/homebrew/share/cmake/Modules/FindOpenSSL.cmake:263 (pkg_check_modules)"
-      - "CMakeLists.txt:135 (find_package)"
+      - "CMakeLists.txt:140 (find_package)"
     mode: "library"
     variable: "pkgcfg_lib__OPENSSL_crypto"
     description: "Path to a library."
@@ -3034,7 +3034,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/FindOpenSSL.cmake:336 (find_path)"
-      - "CMakeLists.txt:135 (find_package)"
+      - "CMakeLists.txt:140 (find_package)"
     mode: "path"
     variable: "OPENSSL_INCLUDE_DIR"
     description: "Path to a file."
@@ -3311,7 +3311,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/FindOpenSSL.cmake:594 (find_library)"
-      - "CMakeLists.txt:135 (find_package)"
+      - "CMakeLists.txt:140 (find_package)"
     mode: "library"
     variable: "OPENSSL_SSL_LIBRARY"
     description: "Path to a library."
@@ -3421,7 +3421,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/opt/homebrew/share/cmake/Modules/FindOpenSSL.cmake:608 (find_library)"
-      - "CMakeLists.txt:135 (find_package)"
+      - "CMakeLists.txt:140 (find_package)"
     mode: "library"
     variable: "OPENSSL_CRYPTO_LIBRARY"
     description: "Path to a library."
@@ -3525,409 +3525,4 @@ events:
         - "/Library/Frameworks"
         - "/Network/Library/Frameworks"
         - "/System/Library/Frameworks"
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
-      - "/opt/homebrew/share/cmake/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:103 (cmake_check_compiler_flag)"
-      - "build/_deps/catch2-src/CMake/CatchMiscFunctions.cmake:12 (check_cxx_compiler_flag)"
-      - "build/_deps/catch2-src/CMake/CatchMiscFunctions.cmake:119 (add_cxx_flag_if_supported_to_targets)"
-      - "build/_deps/catch2-src/src/CMakeLists.txt:352 (add_build_reproducibility_settings)"
-    checks:
-      - "Performing Test HAVE_FLAG__ffile_prefix_map__Users_bruno_Developer_massive_cpp_build__deps_catch2_src__"
-    directories:
-      source: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-VVtaqp"
-      binary: "/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-VVtaqp"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "/Users/bruno/Developer/massive-cpp/cmake;/Users/bruno/Developer/massive-cpp/build/_deps/catch2-src/extras;/Users/bruno/Developer/massive-cpp/build/_deps/catch2-src/CMake"
-      CMAKE_OSX_ARCHITECTURES: ""
-      CMAKE_OSX_DEPLOYMENT_TARGET: ""
-      CMAKE_OSX_SYSROOT: ""
-    buildResult:
-      variable: "HAVE_FLAG__ffile_prefix_map__Users_bruno_Developer_massive_cpp_build__deps_catch2_src__"
-      cached: true
-      stdout: |
-        Change Dir: '/Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-VVtaqp'
-        
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a1091/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a1091.dir/build.make CMakeFiles/cmTC_a1091.dir/build
-        Building CXX object CMakeFiles/cmTC_a1091.dir/src.cxx.o
-        /usr/bin/c++ -DHAVE_FLAG__ffile_prefix_map__Users_bruno_Developer_massive_cpp_build__deps_catch2_src__  -std=c++20 -arch arm64   -ffile-prefix-map=/Users/bruno/Developer/massive-cpp/build/_deps/catch2-src/= -MD -MT CMakeFiles/cmTC_a1091.dir/src.cxx.o -MF CMakeFiles/cmTC_a1091.dir/src.cxx.o.d -o CMakeFiles/cmTC_a1091.dir/src.cxx.o -c /Users/bruno/Developer/massive-cpp/build/CMakeFiles/CMakeScratch/TryCompile-VVtaqp/src.cxx
-        Linking CXX executable cmTC_a1091
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a1091.dir/link.txt --verbose=1
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_a1091.dir/src.cxx.o -o cmTC_a1091
-        
-      exitCode: 0
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/opt/homebrew/share/cmake/Modules/FindDoxygen.cmake:753 (find_program)"
-      - "/opt/homebrew/share/cmake/Modules/FindDoxygen.cmake:937 (_Doxygen_find_doxygen)"
-      - "CMakeLists.txt:285 (find_package)"
-    mode: "program"
-    variable: "DOXYGEN_EXECUTABLE"
-    description: "Doxygen documentation generation tool (https://www.doxygen.nl)"
-    settings:
-      SearchFramework: "FIRST"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "doxygen"
-    candidate_directories:
-      - "/Users/bruno/.kx/bin/"
-      - "/Users/bruno/q/m64/"
-      - "/Users/bruno/.local/bin/"
-      - "/Users/bruno/.nvm/versions/node/v22.13.1/bin/"
-      - "/opt/homebrew/bin/"
-      - "/opt/homebrew/sbin/"
-      - "/Users/bruno/.pyenv/plugins/pyenv-virtualenv/shims/"
-      - "/Users/bruno/.pyenv/shims/"
-      - "/usr/local/bin/"
-      - "/System/Cryptexes/App/usr/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/sbin/"
-      - "/sbin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pmk/env/global/bin/"
-      - "/Users/bruno/.pyenv/bin/"
-      - "/Users/bruno/.orbstack/bin/"
-      - "/Users/bruno/.influxdb/"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
-      - "/opt/homebrew/bin/"
-      - "/opt/homebrew/sbin/"
-      - "/opt/homebrew/"
-      - "/usr/local/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/"
-      - "/usr/bin/"
-      - "/usr/sbin/"
-      - "/usr/"
-      - "/bin/"
-      - "/sbin/"
-      - "/usr/X11R6/bin/"
-      - "/usr/X11R6/sbin/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/bin/"
-      - "/usr/pkg/sbin/"
-      - "/usr/pkg/"
-      - "/opt/bin/"
-      - "/opt/sbin/"
-      - "/opt/"
-      - "/sw/bin/"
-      - "/sw/sbin/"
-      - "/sw/"
-      - "/opt/local/bin/"
-      - "/opt/local/sbin/"
-      - "/opt/local/"
-      - "/Users/bruno/Applications/"
-      - "/Applications/"
-      - "/Applications/Doxygen.app/Contents/Resources/"
-      - "/Applications/Doxygen.app/Contents/MacOS/"
-      - "/Applications/Utilities/Doxygen.app/Contents/Resources/"
-      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/"
-    searched_directories:
-      - "/Users/bruno/.kx/bin/doxygen"
-      - "/Users/bruno/q/m64/doxygen"
-      - "/Users/bruno/.local/bin/doxygen"
-      - "/Users/bruno/.nvm/versions/node/v22.13.1/bin/doxygen"
-      - "/opt/homebrew/bin/doxygen"
-      - "/opt/homebrew/sbin/doxygen"
-      - "/Users/bruno/.pyenv/plugins/pyenv-virtualenv/shims/doxygen"
-      - "/Users/bruno/.pyenv/shims/doxygen"
-      - "/usr/local/bin/doxygen"
-      - "/System/Cryptexes/App/usr/bin/doxygen"
-      - "/usr/bin/doxygen"
-      - "/bin/doxygen"
-      - "/usr/sbin/doxygen"
-      - "/sbin/doxygen"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/doxygen"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/doxygen"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/doxygen"
-      - "/opt/pmk/env/global/bin/doxygen"
-      - "/Users/bruno/.pyenv/bin/doxygen"
-      - "/Users/bruno/.orbstack/bin/doxygen"
-      - "/Users/bruno/.influxdb/doxygen"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/doxygen"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/doxygen"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/doxygen"
-      - "/opt/homebrew/bin/doxygen"
-      - "/opt/homebrew/sbin/doxygen"
-      - "/opt/homebrew/doxygen"
-      - "/usr/local/bin/doxygen"
-      - "/usr/local/sbin/doxygen"
-      - "/usr/local/doxygen"
-      - "/usr/bin/doxygen"
-      - "/usr/sbin/doxygen"
-      - "/usr/doxygen"
-      - "/bin/doxygen"
-      - "/sbin/doxygen"
-      - "/usr/X11R6/bin/doxygen"
-      - "/usr/X11R6/sbin/doxygen"
-      - "/usr/X11R6/doxygen"
-      - "/usr/pkg/bin/doxygen"
-      - "/usr/pkg/sbin/doxygen"
-      - "/usr/pkg/doxygen"
-      - "/opt/bin/doxygen"
-      - "/opt/sbin/doxygen"
-      - "/opt/doxygen"
-      - "/sw/bin/doxygen"
-      - "/sw/sbin/doxygen"
-      - "/sw/doxygen"
-      - "/opt/local/bin/doxygen"
-      - "/opt/local/sbin/doxygen"
-      - "/opt/local/doxygen"
-      - "/Users/bruno/Applications/doxygen"
-      - "/Applications/doxygen"
-      - "/Applications/Doxygen.app/Contents/Resources/doxygen"
-      - "/Applications/Doxygen.app/Contents/MacOS/doxygen"
-      - "/Applications/Utilities/Doxygen.app/Contents/Resources/doxygen"
-      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/doxygen"
-    found: false
-    search_context:
-      ENV{PATH}:
-        - "/Users/bruno/.kx/bin"
-        - "/Users/bruno/q/m64/"
-        - "/Users/bruno/.local/bin"
-        - "/Users/bruno/.nvm/versions/node/v22.13.1/bin"
-        - "/opt/homebrew/bin"
-        - "/opt/homebrew/sbin"
-        - "/Users/bruno/.pyenv/plugins/pyenv-virtualenv/shims"
-        - "/Users/bruno/.pyenv/shims"
-        - "/usr/local/bin"
-        - "/System/Cryptexes/App/usr/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/sbin"
-        - "/sbin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pmk/env/global/bin"
-        - "/Users/bruno/.kx/bin"
-        - "/Users/bruno/q/m64/"
-        - "/Users/bruno/.local/bin"
-        - "/Users/bruno/.nvm/versions/node/v22.13.1/bin"
-        - "/Users/bruno/.pyenv/bin"
-        - "/Users/bruno/.orbstack/bin"
-        - "/Users/bruno/.influxdb/"
-        - "/Users/bruno/.orbstack/bin"
-        - "/Users/bruno/.influxdb/"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
-        - "/opt/homebrew"
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/opt/homebrew"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-        - "/sw"
-        - "/opt/local"
-      CMAKE_SYSTEM_APPBUNDLE_PATH:
-        - "/Users/bruno/Applications"
-        - "/Applications"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/opt/homebrew/share/cmake/Modules/FindDoxygen.cmake:840 (find_program)"
-      - "/opt/homebrew/share/cmake/Modules/FindDoxygen.cmake:941 (_Doxygen_find_dot)"
-      - "CMakeLists.txt:285 (find_package)"
-    mode: "program"
-    variable: "DOXYGEN_DOT_EXECUTABLE"
-    description: "Dot tool for use with Doxygen"
-    settings:
-      SearchFramework: "FIRST"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "dot"
-    candidate_directories:
-      - "/Users/bruno/.kx/bin/"
-      - "/Users/bruno/q/m64/"
-      - "/Users/bruno/.local/bin/"
-      - "/Users/bruno/.nvm/versions/node/v22.13.1/bin/"
-      - "/opt/homebrew/bin/"
-      - "/opt/homebrew/sbin/"
-      - "/Users/bruno/.pyenv/plugins/pyenv-virtualenv/shims/"
-      - "/Users/bruno/.pyenv/shims/"
-      - "/usr/local/bin/"
-      - "/System/Cryptexes/App/usr/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/sbin/"
-      - "/sbin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/opt/pmk/env/global/bin/"
-      - "/Users/bruno/.pyenv/bin/"
-      - "/Users/bruno/.orbstack/bin/"
-      - "/Users/bruno/.influxdb/"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
-      - "/opt/homebrew/bin/"
-      - "/opt/homebrew/sbin/"
-      - "/opt/homebrew/"
-      - "/usr/local/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/"
-      - "/usr/bin/"
-      - "/usr/sbin/"
-      - "/usr/"
-      - "/bin/"
-      - "/sbin/"
-      - "/usr/X11R6/bin/"
-      - "/usr/X11R6/sbin/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/bin/"
-      - "/usr/pkg/sbin/"
-      - "/usr/pkg/"
-      - "/opt/bin/"
-      - "/opt/sbin/"
-      - "/opt/"
-      - "/sw/bin/"
-      - "/sw/sbin/"
-      - "/sw/"
-      - "/opt/local/bin/"
-      - "/opt/local/sbin/"
-      - "/opt/local/"
-      - "/Users/bruno/Applications/"
-      - "/Applications/"
-      - "/ATT/Graphviz/bin/"
-      - "C:/Program Files/ATT/Graphviz/bin/"
-      - "/Applications/Graphviz.app/Contents/MacOS/"
-      - "/Applications/Utilities/Graphviz.app/Contents/MacOS/"
-      - "/Applications/Doxygen.app/Contents/Resources/"
-      - "/Applications/Doxygen.app/Contents/MacOS/"
-      - "/Applications/Utilities/Doxygen.app/Contents/Resources/"
-      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/"
-    searched_directories:
-      - "/Users/bruno/.kx/bin/dot"
-      - "/Users/bruno/q/m64/dot"
-      - "/Users/bruno/.local/bin/dot"
-      - "/Users/bruno/.nvm/versions/node/v22.13.1/bin/dot"
-      - "/opt/homebrew/bin/dot"
-      - "/opt/homebrew/sbin/dot"
-      - "/Users/bruno/.pyenv/plugins/pyenv-virtualenv/shims/dot"
-      - "/Users/bruno/.pyenv/shims/dot"
-      - "/usr/local/bin/dot"
-      - "/System/Cryptexes/App/usr/bin/dot"
-      - "/usr/bin/dot"
-      - "/bin/dot"
-      - "/usr/sbin/dot"
-      - "/sbin/dot"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/dot"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/dot"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dot"
-      - "/opt/pmk/env/global/bin/dot"
-      - "/Users/bruno/.pyenv/bin/dot"
-      - "/Users/bruno/.orbstack/bin/dot"
-      - "/Users/bruno/.influxdb/dot"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/dot"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/dot"
-      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/dot"
-      - "/opt/homebrew/bin/dot"
-      - "/opt/homebrew/sbin/dot"
-      - "/opt/homebrew/dot"
-      - "/usr/local/bin/dot"
-      - "/usr/local/sbin/dot"
-      - "/usr/local/dot"
-      - "/usr/bin/dot"
-      - "/usr/sbin/dot"
-      - "/usr/dot"
-      - "/bin/dot"
-      - "/sbin/dot"
-      - "/usr/X11R6/bin/dot"
-      - "/usr/X11R6/sbin/dot"
-      - "/usr/X11R6/dot"
-      - "/usr/pkg/bin/dot"
-      - "/usr/pkg/sbin/dot"
-      - "/usr/pkg/dot"
-      - "/opt/bin/dot"
-      - "/opt/sbin/dot"
-      - "/opt/dot"
-      - "/sw/bin/dot"
-      - "/sw/sbin/dot"
-      - "/sw/dot"
-      - "/opt/local/bin/dot"
-      - "/opt/local/sbin/dot"
-      - "/opt/local/dot"
-      - "/Users/bruno/Applications/dot"
-      - "/Applications/dot"
-      - "/ATT/Graphviz/bin/dot"
-      - "C:/Program Files/ATT/Graphviz/bin/dot"
-      - "/Applications/Graphviz.app/Contents/MacOS/dot"
-      - "/Applications/Utilities/Graphviz.app/Contents/MacOS/dot"
-      - "/Applications/Doxygen.app/Contents/Resources/dot"
-      - "/Applications/Doxygen.app/Contents/MacOS/dot"
-      - "/Applications/Utilities/Doxygen.app/Contents/Resources/dot"
-      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/dot"
-    found: false
-    search_context:
-      ENV{PATH}:
-        - "/Users/bruno/.kx/bin"
-        - "/Users/bruno/q/m64/"
-        - "/Users/bruno/.local/bin"
-        - "/Users/bruno/.nvm/versions/node/v22.13.1/bin"
-        - "/opt/homebrew/bin"
-        - "/opt/homebrew/sbin"
-        - "/Users/bruno/.pyenv/plugins/pyenv-virtualenv/shims"
-        - "/Users/bruno/.pyenv/shims"
-        - "/usr/local/bin"
-        - "/System/Cryptexes/App/usr/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/sbin"
-        - "/sbin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/opt/pmk/env/global/bin"
-        - "/Users/bruno/.kx/bin"
-        - "/Users/bruno/q/m64/"
-        - "/Users/bruno/.local/bin"
-        - "/Users/bruno/.nvm/versions/node/v22.13.1/bin"
-        - "/Users/bruno/.pyenv/bin"
-        - "/Users/bruno/.orbstack/bin"
-        - "/Users/bruno/.influxdb/"
-        - "/Users/bruno/.orbstack/bin"
-        - "/Users/bruno/.influxdb/"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
-        - "/opt/homebrew"
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/opt/homebrew"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-        - "/sw"
-        - "/opt/local"
-      CMAKE_SYSTEM_APPBUNDLE_PATH:
-        - "/Users/bruno/Applications"
-        - "/Applications"
 ...

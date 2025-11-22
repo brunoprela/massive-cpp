@@ -17,7 +17,7 @@ std::pair<simdjson::ondemand::array, PaginationInfo> parse_paginated_response_ba
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -35,16 +35,25 @@ std::pair<simdjson::ondemand::array, PaginationInfo> parse_paginated_response_ba
     PaginationInfo pagination = extract_pagination_info(root_obj.value());
     return {results_array, pagination};
 }
+} // namespace
 
 // Paginated iterator for tickers
 PaginatedIterator<Ticker> RESTClient::list_tickers_iter(
-    const std::optional<std::string> &ticker, const std::optional<std::string> &ticker_lt,
-    const std::optional<std::string> &ticker_lte, const std::optional<std::string> &ticker_gt,
-    const std::optional<std::string> &ticker_gte, const std::optional<std::string> &type,
-    const std::optional<std::string> &market, const std::optional<std::string> &exchange,
-    std::optional<int> cusip, std::optional<int> cik, const std::optional<std::string> &date,
-    std::optional<bool> active, const std::optional<std::string> &search,
-    const std::optional<std::string> &sort, const std::optional<std::string> &order) {
+    const std::optional<std::string> &ticker,
+    const std::optional<std::string> &ticker_lt,
+    const std::optional<std::string> &ticker_lte,
+    const std::optional<std::string> &ticker_gt,
+    const std::optional<std::string> &ticker_gte,
+    const std::optional<std::string> &type,
+    const std::optional<std::string> &market,
+    const std::optional<std::string> &exchange,
+    std::optional<int> cusip,
+    std::optional<int> cik,
+    const std::optional<std::string> &date,
+    std::optional<bool> active,
+    const std::optional<std::string> &search,
+    const std::optional<std::string> &sort,
+    const std::optional<std::string> &order) {
     
     // Build initial parameters
     std::map<std::string, std::string> base_params;

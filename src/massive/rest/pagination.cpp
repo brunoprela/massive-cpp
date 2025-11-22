@@ -80,4 +80,3 @@ bool has_pagination(simdjson::ondemand::object& root_obj) {
 }
 
 } // namespace massive::rest
-

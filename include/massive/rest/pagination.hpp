@@ -6,15 +6,9 @@
 #include <functional>
 #include <memory>
 #include <stdexcept>
+#include <simdjson/ondemand.h>
 
 namespace massive::rest {
-
-// Forward declaration
-namespace simdjson {
-namespace ondemand {
-class object;
-}
-}
 
 // Pagination metadata from API responses
 struct PaginationInfo {

@@ -42,7 +42,7 @@ std::vector<EconomicIndicator> RESTClient::list_economic_indicators(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -57,39 +57,39 @@ std::vector<EconomicIndicator> RESTClient::list_economic_indicators(
                 auto obj_result = result_elem.get_object();
                 if (!obj_result.error()) {
                     auto obj = obj_result.value();
-                    EconomicIndicator indicator;
+                    EconomicIndicator economic_indicator;
 
                     auto id_field = obj.find_field_unordered("id");
                     if (!id_field.error()) {
-                        indicator.id = std::string(id_field.value().get_string().value());
+                        economic_indicator.id = std::string(id_field.value().get_string().value());
                     }
 
                     auto name_field = obj.find_field_unordered("name");
                     if (!name_field.error()) {
-                        indicator.name = std::string(name_field.value().get_string().value());
+                        economic_indicator.name = std::string(name_field.value().get_string().value());
                     }
 
                     auto country_field = obj.find_field_unordered("country");
                     if (!country_field.error()) {
-                        indicator.country = std::string(country_field.value().get_string().value());
+                        economic_indicator.country = std::string(country_field.value().get_string().value());
                     }
 
                     auto value_field = obj.find_field_unordered("value");
                     if (!value_field.error()) {
-                        indicator.value = value_field.value().get_double().value();
+                        economic_indicator.value = value_field.value().get_double().value();
                     }
 
                     auto date_field = obj.find_field_unordered("date");
                     if (!date_field.error()) {
-                        indicator.date = std::string(date_field.value().get_string().value());
+                        economic_indicator.date = std::string(date_field.value().get_string().value());
                     }
 
                     auto change_percent_field = obj.find_field_unordered("change_percent");
                     if (!change_percent_field.error()) {
-                        indicator.change_percent = change_percent_field.value().get_double().value();
+                        economic_indicator.change_percent = change_percent_field.value().get_double().value();
                     }
 
-                    results.push_back(indicator);
+                    results.push_back(economic_indicator);
                 }
             }
         }
@@ -136,7 +136,7 @@ std::vector<EconomicCalendarEvent> RESTClient::list_economic_calendar_events(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -233,7 +233,7 @@ std::vector<EconomicDataPoint> RESTClient::get_economic_data_series(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -329,7 +329,7 @@ std::vector<TreasuryYield> RESTClient::list_treasury_yields(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -460,7 +460,7 @@ std::vector<FedInflation> RESTClient::list_inflation(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -566,7 +566,7 @@ std::vector<FedInflationExpectations> RESTClient::list_inflation_expectations(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");

@@ -15,7 +15,7 @@ std::vector<MarketHoliday> RESTClient::get_market_holidays() {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_array = doc.get_array();
     if (root_array.error()) {
         throw std::runtime_error("Response is not a JSON array");
@@ -65,7 +65,7 @@ MarketStatus RESTClient::get_market_status() {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -165,7 +165,7 @@ std::vector<Ticker> RESTClient::list_tickers(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -242,7 +242,7 @@ TickerDetails RESTClient::get_ticker_details(const std::string &ticker,
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -321,7 +321,7 @@ std::vector<TickerNews> RESTClient::list_ticker_news(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -372,10 +372,11 @@ std::vector<TickerNews> RESTClient::list_ticker_news(
                     if (!tickers_field.error()) {
                         auto tickers_array = tickers_field.value().get_array();
                         if (!tickers_array.error()) {
+                            news.tickers = std::vector<std::string>();
                             for (auto ticker_elem : tickers_array.value()) {
                                 auto ticker_str = ticker_elem.get_string();
                                 if (!ticker_str.error()) {
-                                    news.tickers.push_back(std::string(ticker_str.value()));
+                                    news.tickers.value().push_back(std::string(ticker_str.value()));
                                 }
                             }
                         }
@@ -406,7 +407,7 @@ std::vector<TickerTypes> RESTClient::get_ticker_types() {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -463,7 +464,7 @@ std::vector<RelatedCompany> RESTClient::get_related_companies(const std::string 
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -544,7 +545,7 @@ std::vector<Split> RESTClient::list_splits(const std::optional<std::string> &tic
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -611,7 +612,7 @@ std::vector<Dividend> RESTClient::list_dividends(const std::optional<std::string
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -686,7 +687,7 @@ std::vector<Condition> RESTClient::list_conditions(std::optional<int> limit) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -740,7 +741,7 @@ std::vector<Exchange> RESTClient::get_exchanges() {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -797,7 +798,7 @@ OptionsContract RESTClient::get_options_contract(const std::string &ticker) {
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -939,7 +940,7 @@ std::vector<OptionsContract> RESTClient::list_options_contracts(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -1048,7 +1049,7 @@ std::vector<IPO> RESTClient::list_ipos(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -1233,7 +1234,7 @@ std::vector<ShortInterest> RESTClient::list_short_interest(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -1388,7 +1389,7 @@ std::vector<ShortVolume> RESTClient::list_short_volume(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -1457,7 +1458,7 @@ TickerChangeResults RESTClient::get_ticker_events(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");

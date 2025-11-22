@@ -34,7 +34,7 @@ std::string url_encode(const std::string &value) {
         if (std::isalnum(c) || c == '-' || c == '_' || c == '.' || c == '~') {
             encoded << c;
         } else {
-            encoded << '%' << std::setw(2) << int((unsigned char)c);
+            encoded << '%' << std::setw(2) << static_cast<int>(static_cast<unsigned char>(c));
         }
     }
     return encoded.str();
@@ -77,7 +77,7 @@ std::chrono::milliseconds calculate_backoff(
 }
 } // namespace
 
-RESTClient::RESTClient(ClientConfig config, std::shared_ptr<core::IHttpTransport> transport)
+RESTClient::RESTClient(core::ClientConfig config, std::shared_ptr<core::IHttpTransport> transport)
     : config_(std::move(config)), transport_(std::move(transport)),
       json_codec_(core::make_passthrough_json_codec()) {
     if (config_.api_key().empty()) {

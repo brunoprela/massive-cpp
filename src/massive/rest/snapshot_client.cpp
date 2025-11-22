@@ -6,7 +6,8 @@ namespace massive::rest {
 
 namespace {
 // Helper function to parse Agg from JSON object
-Agg parse_agg_from_object(simdjson::ondemand::object &obj) {
+template<typename ObjectType>
+Agg parse_agg_from_object(ObjectType& obj) {
     Agg agg;
 
     auto open_field = obj.find_field_unordered("o");
@@ -58,7 +59,8 @@ Agg parse_agg_from_object(simdjson::ondemand::object &obj) {
 }
 
 // Helper function to parse LastTrade from JSON object
-LastTrade parse_last_trade_from_object(simdjson::ondemand::object &obj) {
+template<typename ObjectType>
+LastTrade parse_last_trade_from_object(ObjectType& obj) {
     LastTrade trade;
 
     auto ticker_field = obj.find_field_unordered("T");
@@ -85,7 +87,8 @@ LastTrade parse_last_trade_from_object(simdjson::ondemand::object &obj) {
 }
 
 // Helper function to parse LastQuote from JSON object
-LastQuote parse_last_quote_from_object(simdjson::ondemand::object &obj) {
+template<typename ObjectType>
+LastQuote parse_last_quote_from_object(ObjectType& obj) {
     LastQuote quote;
 
     auto ticker_field = obj.find_field_unordered("T");
@@ -110,6 +113,66 @@ LastQuote parse_last_quote_from_object(simdjson::ondemand::object &obj) {
 
     return quote;
 }
+
+// Helper function to parse TickerSnapshot from JSON object
+template<typename ObjectType>
+TickerSnapshot parse_ticker_snapshot_from_object(ObjectType& ticker_obj) {
+    TickerSnapshot snapshot;
+
+    auto ticker_name_field = ticker_obj.find_field_unordered("ticker");
+    if (!ticker_name_field.error()) {
+        snapshot.ticker = std::string(ticker_name_field.value().get_string().value());
+    }
+
+    auto day_field = ticker_obj.find_field_unordered("day");
+    if (!day_field.error()) {
+        auto day_obj_result = day_field.value().get_object();
+        if (!day_obj_result.error()) {
+            snapshot.day = parse_agg_from_object(day_obj_result.value());
+        }
+    }
+
+    auto last_quote_field = ticker_obj.find_field_unordered("lastQuote");
+    if (!last_quote_field.error()) {
+        auto quote_obj_result = last_quote_field.value().get_object();
+        if (!quote_obj_result.error()) {
+            snapshot.last_quote = parse_last_quote_from_object(quote_obj_result.value());
+        }
+    }
+
+    auto last_trade_field = ticker_obj.find_field_unordered("lastTrade");
+    if (!last_trade_field.error()) {
+        auto trade_obj_result = last_trade_field.value().get_object();
+        if (!trade_obj_result.error()) {
+            snapshot.last_trade = parse_last_trade_from_object(trade_obj_result.value());
+        }
+    }
+
+    auto prev_day_field = ticker_obj.find_field_unordered("prevDay");
+    if (!prev_day_field.error()) {
+        auto prev_day_obj_result = prev_day_field.value().get_object();
+        if (!prev_day_obj_result.error()) {
+            snapshot.prev_day = parse_agg_from_object(prev_day_obj_result.value());
+        }
+    }
+
+    auto todays_change_field = ticker_obj.find_field_unordered("todaysChange");
+    if (!todays_change_field.error()) {
+        snapshot.todays_change = todays_change_field.value().get_double().value();
+    }
+
+    auto todays_change_percent_field = ticker_obj.find_field_unordered("todaysChangePerc");
+    if (!todays_change_percent_field.error()) {
+        snapshot.todays_change_percent = todays_change_percent_field.value().get_double().value();
+    }
+
+    auto updated_field = ticker_obj.find_field_unordered("updated");
+    if (!updated_field.error()) {
+        snapshot.updated = updated_field.value().get_int64().value();
+    }
+
+    return snapshot;
+}
 } // namespace
 
 TickerSnapshot RESTClient::get_snapshot_ticker(SnapshotMarketType market_type,
@@ -126,7 +189,7 @@ TickerSnapshot RESTClient::get_snapshot_ticker(SnapshotMarketType market_type,
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -226,7 +289,7 @@ std::vector<TickerSnapshot> RESTClient::get_snapshot_all(SnapshotMarketType mark
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -331,7 +394,7 @@ std::vector<TickerSnapshot> RESTClient::get_snapshot_direction(SnapshotMarketTyp
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -464,7 +527,7 @@ std::vector<UniversalSnapshot> RESTClient::list_universal_snapshots(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -526,7 +589,7 @@ RESTClient::get_snapshot_indices(const std::vector<std::string> &ticker_any_of) 
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -583,7 +646,7 @@ TickerSnapshot RESTClient::get_snapshot_option(const std::string& option_ticker)
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -624,7 +687,7 @@ std::vector<TickerSnapshot> RESTClient::list_snapshot_options_chain(
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -659,7 +722,7 @@ SnapshotTickerFullBook RESTClient::get_snapshot_crypto_book(const std::string& t
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
     }
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto root_obj = doc.get_object();
     if (root_obj.error()) {
         throw std::runtime_error("Response is not a JSON object");
@@ -696,11 +759,13 @@ SnapshotTickerFullBook RESTClient::get_snapshot_crypto_book(const std::string& t
                             if (!exchange_shares_field.error()) {
                                 auto exchange_obj = exchange_shares_field.value().get_object();
                                 if (!exchange_obj.error()) {
+                                    quote.exchange_shares = std::map<std::string, double>();
                                     for (auto exchange_field : exchange_obj.value()) {
-                                        auto key = std::string(exchange_field.unescaped_key());
+                                        auto key_result = exchange_field.unescaped_key();
+                                        auto key = std::string(key_result.value());
                                         auto value = exchange_field.value().get_double();
                                         if (!value.error()) {
-                                            quote.exchange_shares[key] = value.value();
+                                            quote.exchange_shares.value()[key] = value.value();
                                         }
                                     }
                                 }
@@ -727,11 +792,13 @@ SnapshotTickerFullBook RESTClient::get_snapshot_crypto_book(const std::string& t
                             if (!exchange_shares_field.error()) {
                                 auto exchange_obj = exchange_shares_field.value().get_object();
                                 if (!exchange_obj.error()) {
+                                    quote.exchange_shares = std::map<std::string, double>();
                                     for (auto exchange_field : exchange_obj.value()) {
-                                        auto key = std::string(exchange_field.unescaped_key());
+                                        auto key_result = exchange_field.unescaped_key();
+                                        auto key = std::string(key_result.value());
                                         auto value = exchange_field.value().get_double();
                                         if (!value.error()) {
-                                            quote.exchange_shares[key] = value.value();
+                                            quote.exchange_shares.value()[key] = value.value();
                                         }
                                     }
                                 }

@@ -125,7 +125,7 @@ void WebSocketClient::connect(MessageHandler handler) {
                 buffer.clear();
                 impl->ws->read(buffer);
                 
-                std::string message = beast::make_printable(buffer.data());
+                std::string message = beast::buffers_to_string(buffer.data());
                 process_message(message);
             } catch (const std::exception& e) {
                 if (verbose_) {
@@ -154,14 +154,14 @@ void WebSocketClient::authenticate() {
     // Read auth response
     beast::flat_buffer buffer;
     impl->ws->read(buffer);
-    std::string response = beast::make_printable(buffer.data());
+    std::string response = beast::buffers_to_string(buffer.data());
     
     // Parse response to check if auth succeeded
     simdjson::ondemand::parser parser;
     simdjson::padded_string json = response;
     auto doc_result = parser.iterate(json);
     if (!doc_result.error()) {
-        auto doc = doc_result.value();
+        auto& doc = doc_result.value();
         auto arr = doc.get_array();
         if (!arr.error()) {
             for (auto elem : arr.value()) {
@@ -300,7 +300,7 @@ std::vector<WebSocketMessage> WebSocketClient::parse_messages(const std::string&
         return messages;
     }
     
-    auto doc = doc_result.value();
+    auto& doc = doc_result.value();
     auto arr = doc.get_array();
     if (arr.error()) {
         return messages;
