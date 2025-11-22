@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     
     - name: Install dependencies
       run: |
@@ -22,7 +22,7 @@ jobs:
         sudo apt-get install -y libssl-dev
     
     - name: Set up CMake
-      uses: jwlawson/actions-setup-cmake@v1.14
+      uses: jwlawson/actions-setup-cmake@v2.0
     
     - name: Configure with benchmarks
       run: |
@@ -39,7 +39,7 @@ jobs:
         ./benchmark_json_parsing --benchmark_format=json > benchmark_results.json || true
     
     - name: Upload benchmark results
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       if: always()
       with:
         name: benchmark-results

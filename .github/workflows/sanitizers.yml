@@ -22,7 +22,7 @@ jobs:
             compiler: gcc  # Thread sanitizer requires clang
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     
     - name: Install dependencies
       run: |
@@ -38,7 +38,7 @@ jobs:
       run: sudo apt-get install -y clang-15
     
     - name: Set up CMake
-      uses: jwlawson/actions-setup-cmake@v1.14
+      uses: jwlawson/actions-setup-cmake@v2.0
     
     - name: Configure with sanitizer
       run: |

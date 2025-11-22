@@ -19,7 +19,7 @@ jobs:
             artifact_name: massive-cpp-windows
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
     - name: Install dependencies
       if: matrix.os == 'ubuntu-latest'
@@ -30,7 +30,7 @@ jobs:
       run: brew install openssl
 
     - name: Set up CMake
-      uses: jwlawson/actions-setup-cmake@v1.14
+      uses: jwlawson/actions-setup-cmake@v2.0
 
     - name: Configure
       run: cmake -B build -DCMAKE_BUILD_TYPE=Release
@@ -52,7 +52,7 @@ jobs:
         fi
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: ${{ matrix.artifact_name }}
         path: ${{ matrix.artifact_name }}.tar.gz

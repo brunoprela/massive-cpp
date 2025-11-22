@@ -20,7 +20,7 @@ jobs:
             build_type: Debug  # Skip Debug on Windows to save CI time
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     
     - name: Install dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
@@ -34,7 +34,7 @@ jobs:
         brew install openssl
     
     - name: Set up CMake
-      uses: jwlawson/actions-setup-cmake@v1.14
+      uses: jwlawson/actions-setup-cmake@v2.0
     
     - name: Run verification
       continue-on-error: true
