@@ -2,3 +2,35 @@
 alpaca-cpp/
 massive-python/
 
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Coverage
+*.gcov
+*.gcda
+*.gcno
+coverage.info
+coverage/
+
+# Documentation
+docs/html/
+docs/latex/
+
+# Dependencies
+deps/
+third_party/
+
+# Environment
+.env
+.env.local
+

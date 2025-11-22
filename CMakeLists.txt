@@ -44,7 +44,8 @@ if(MASSIVE_VENDOR_DEPS)
     set(BOOST_ENABLE_CMAKE ON CACHE BOOL "" FORCE)
     FetchContent_Declare(
         boost
-        URL https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2)
+        URL https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE)
     FetchContent_MakeAvailable(boost)
     set(MASSIVE_BOOST_INCLUDE_DIR ${boost_SOURCE_DIR})
     set(BOOST_URL_SOURCES
@@ -269,4 +270,33 @@ install(FILES
 install(FILES LICENSE
     DESTINATION ${CMAKE_INSTALL_DOCDIR}
 )
+
+# Tests
+if(MASSIVE_BUILD_TESTS)
+    add_subdirectory(tests)
+endif()
+
+# Benchmarks (optional)
+option(MASSIVE_BUILD_BENCHMARKS "Build benchmarks" OFF)
+if(MASSIVE_BUILD_BENCHMARKS)
+    add_subdirectory(benchmarks)
+endif()
+
+# Documentation (Doxygen)
+find_package(Doxygen QUIET)
+if(DOXYGEN_FOUND)
+    option(MASSIVE_BUILD_DOCS "Build API documentation" OFF)
+    if(MASSIVE_BUILD_DOCS)
+        set(DOXYGEN_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/docs)
+        set(DOXYGEN_PROJECT_VERSION ${PROJECT_VERSION})
+        configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in
+                       ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
+        add_custom_target(docs
+            COMMAND ${DOXYGEN_EXECUTABLE} ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
+            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+            COMMENT "Generating API documentation with Doxygen"
+            VERBATIM
+        )
+    endif()
+endif()
 

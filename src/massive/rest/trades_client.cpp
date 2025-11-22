@@ -43,8 +43,8 @@ std::vector<Trade> RESTClient::list_trades(const std::string &ticker,
     auto response = send_request(core::HttpMethod::Get, path, params);
 
     // Parse JSON response
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -95,8 +95,8 @@ LastTrade RESTClient::get_last_trade(const std::string &ticker) {
     std::string path = "/v2/last/trade/" + ticker;
     auto response = send_request(core::HttpMethod::Get, path);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -144,8 +144,8 @@ CryptoTrade RESTClient::get_last_crypto_trade(const std::string& from, const std
     std::string path = "/v1/last/crypto/" + from + "/" + to;
     auto response = send_request(core::HttpMethod::Get, path);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");

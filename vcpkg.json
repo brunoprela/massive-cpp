@@ -1,0 +1,41 @@
+{
+  "name": "massive-cpp",
+  "version": "0.1.0",
+  "description": "Modern C++20 SDK for the Massive REST and WebSocket APIs",
+  "homepage": "https://github.com/your-org/massive-cpp",
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "boost-beast",
+      "version>=": "1.70.0"
+    },
+    {
+      "name": "boost-system",
+      "version>=": "1.70.0"
+    },
+    {
+      "name": "boost-url",
+      "version>=": "1.70.0"
+    },
+    {
+      "name": "simdjson",
+      "version>=": "3.0.0"
+    },
+    {
+      "name": "openssl",
+      "version>=": "1.1.0"
+    }
+  ],
+  "features": {
+    "tests": {
+      "description": "Build unit tests",
+      "dependencies": [
+        {
+          "name": "catch2",
+          "version>=": "3.0.0"
+        }
+      ]
+    }
+  }
+}
+

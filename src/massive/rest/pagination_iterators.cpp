@@ -11,8 +11,8 @@ namespace {
 std::pair<simdjson::ondemand::array, PaginationInfo> parse_paginated_response_base(
     const std::string& response_body) {
     
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response_body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response_body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");

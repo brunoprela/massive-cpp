@@ -209,7 +209,6 @@ struct FinancialRatios {
     std::optional<double> earnings_yield;
     std::optional<double> free_cash_flow_yield;
     std::optional<double> debt_to_ebitda;
-    std::optional<double> net_debt_to_ebitda;
     std::optional<double> market_cap_to_operating_cash_flow;
     std::optional<double> enterprise_value_to_operating_cash_flow;
     std::optional<double> enterprise_value_to_sales;

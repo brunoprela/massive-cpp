@@ -1,0 +1,36 @@
+name: Smoke Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  smoke-test:
+    name: Smoke Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libssl-dev
+    
+    - name: Set up CMake
+      uses: jwlawson/actions-setup-cmake@v1.14
+    
+    - name: Quick Start Test
+      run: |
+        chmod +x scripts/*.sh
+        ./scripts/quick-start.sh || exit 1
+    
+    - name: Verify Examples Build
+      run: |
+        cmake -B build -DMASSIVE_BUILD_TESTS=OFF
+        cmake --build build --target massive_example_get_aggs -j$(nproc)
+        test -f build/examples/massive_example_get_aggs || test -f build/Release/examples/massive_example_get_aggs.exe
+

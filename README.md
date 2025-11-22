@@ -5,6 +5,12 @@ Modern C++20 SDK for the Massive (formerly Polygon.io) REST and WebSocket APIs. 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://en.cppreference.com/w/cpp/20)
 [![CMake](https://img.shields.io/badge/CMake-3.20%2B-blue.svg)](https://cmake.org/)
+[![CI](https://github.com/your-org/massive-cpp/workflows/CI/badge.svg)](https://github.com/your-org/massive-cpp/actions)
+[![CodeQL](https://github.com/your-org/massive-cpp/workflows/CodeQL/badge.svg)](https://github.com/your-org/massive-cpp/actions)
+[![Coverage](https://codecov.io/gh/your-org/massive-cpp/branch/main/graph/badge.svg)](https://codecov.io/gh/your-org/massive-cpp)
+[![Documentation](https://img.shields.io/badge/docs-doxygen-blue.svg)](https://your-org.github.io/massive-cpp)
+[![Conan](https://img.shields.io/badge/Conan-available-green.svg)](https://conan.io)
+[![vcpkg](https://img.shields.io/badge/vcpkg-available-blue.svg)](https://vcpkg.io)
 
 ## Project Status
 
@@ -228,8 +234,34 @@ brew install simdjson
 - ✅ Retry logic with exponential backoff
 - ✅ Structured logging
 
-## Getting Started
+## Quick Start
 
+Get up and running in minutes:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-org/massive-cpp.git
+cd massive-cpp
+
+# Run quick start script (recommended)
+./scripts/quick-start.sh
+
+# Or manually:
+mkdir build && cd build
+cmake .. -DMASSIVE_BUILD_TESTS=ON
+cmake --build . -j$(nproc)
+ctest --output-on-failure
+```
+
+### Verify Installation
+
+Run the verification script to ensure everything is set up correctly:
+
+```bash
+./scripts/verify.sh
+```
+
+## Getting Started
 
 ### Configuration
 
@@ -385,11 +417,77 @@ cmake --install build --prefix /usr/local
 
 ## Contributing
 
-Contributions are welcome! Please open an issue to discuss large design changes. Coding style is enforced via `.clang-format`, and CI will eventually cover build + tests on macOS, Linux, and Windows.
+## Development
+
+### Building Documentation
+
+Generate API documentation with Doxygen:
+
+```bash
+cmake -B build -DMASSIVE_BUILD_DOCS=ON
+cmake --build build --target docs
+```
+
+Documentation will be generated in `build/docs/html/`.
+
+### Running Tests
+
+```bash
+cmake -B build -DMASSIVE_BUILD_TESTS=ON
+cmake --build build
+ctest --test-dir build
+```
+
+### Code Formatting
+
+Format code with clang-format:
+
+```bash
+make format
+# or
+find include src examples -name "*.hpp" -o -name "*.cpp" | xargs clang-format -i
+```
+
+### Benchmarks
+
+Build and run benchmarks:
+
+```bash
+cmake -B build -DMASSIVE_BUILD_BENCHMARKS=ON
+cmake --build build
+./build/benchmarks/benchmark_json_parsing
+```
+
+## Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## Security
+
+Please report security vulnerabilities to [security@your-org.com](mailto:security@your-org.com). See [SECURITY.md](.github/SECURITY.md) for details.
 
 ## License
 
 Licensed under the MIT License. See [LICENSE](LICENSE) file for details.
+
+## Verification
+
+Before using the library, you can verify everything is set up correctly:
+
+```bash
+# Run comprehensive verification
+./scripts/verify.sh
+
+# Test the build system
+./scripts/test-build.sh
+
+# Or use the quick start (includes verification)
+./scripts/quick-start.sh
+```
+
+## Pre-Release Checklist
+
+See [CHECKLIST.md](CHECKLIST.md) for a comprehensive checklist to ensure the repository is ready for release.
 
 ## Related Projects
 

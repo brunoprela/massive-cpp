@@ -24,8 +24,8 @@ std::vector<Agg> RESTClient::list_aggs(const std::string &ticker, int multiplier
     auto response = send_request(core::HttpMethod::Get, path, params);
 
     // Parse JSON response using simdjson
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -121,8 +121,8 @@ std::vector<Trade> RESTClient::list_trades(const std::string &ticker,
     auto response = send_request(core::HttpMethod::Get, path, params);
 
     // Parse JSON response
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -173,8 +173,8 @@ LastTrade RESTClient::get_last_trade(const std::string &ticker) {
     std::string path = "/v2/last/trade/" + ticker;
     auto response = send_request(core::HttpMethod::Get, path);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -235,8 +235,8 @@ std::vector<Quote> RESTClient::list_quotes(const std::string &ticker,
     std::string path = "/v3/quotes/" + ticker;
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -287,8 +287,8 @@ LastQuote RESTClient::get_last_quote(const std::string &ticker) {
     std::string path = "/v2/last/quote/" + ticker;
     auto response = send_request(core::HttpMethod::Get, path);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -347,8 +347,8 @@ std::vector<GroupedDailyAgg> RESTClient::get_grouped_daily_aggs(const std::strin
     std::string path = "/v2/aggs/grouped/locale/" + locale + "/market/" + market_type + "/" + date;
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -441,8 +441,8 @@ DailyOpenCloseAgg RESTClient::get_daily_open_close_agg(const std::string &ticker
     std::string path = "/v1/open-close/" + ticker + "/" + date;
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -524,8 +524,8 @@ PreviousCloseAgg RESTClient::get_previous_close_agg(const std::string &ticker,
     std::string path = "/v2/aggs/ticker/" + ticker + "/prev";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -612,8 +612,8 @@ std::vector<Agg> RESTClient::get_aggs(
     std::string path = "/v2/aggs/ticker/" + ticker + "/range/" + std::to_string(multiplier) + "/" + timespan + "/" + from + "/" + to;
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");

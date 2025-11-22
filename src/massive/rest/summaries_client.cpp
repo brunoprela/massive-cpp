@@ -21,8 +21,8 @@ RESTClient::get_summaries(const std::vector<std::string> &ticker_any_of) {
     std::string path = "/v1/summaries";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");

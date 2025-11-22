@@ -36,8 +36,8 @@ std::vector<EconomicIndicator> RESTClient::list_economic_indicators(
     std::string path = "/v1/economic";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -130,8 +130,8 @@ std::vector<EconomicCalendarEvent> RESTClient::list_economic_calendar_events(
     std::string path = "/v1/economic/calendar";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -227,8 +227,8 @@ std::vector<EconomicDataPoint> RESTClient::get_economic_data_series(
     std::string path = "/v1/economic/series";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -323,8 +323,8 @@ std::vector<TreasuryYield> RESTClient::list_treasury_yields(
     std::string path = "/fed/v1/treasury-yields";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -454,8 +454,8 @@ std::vector<FedInflation> RESTClient::list_inflation(
     std::string path = "/fed/v1/inflation";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -560,8 +560,8 @@ std::vector<FedInflationExpectations> RESTClient::list_inflation_expectations(
     std::string path = "/fed/v1/inflation-expectations";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");

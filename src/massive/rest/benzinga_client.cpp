@@ -43,8 +43,8 @@ std::vector<BenzingaNews> RESTClient::list_benzinga_news(
     std::string path = "/v1/news";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -155,8 +155,8 @@ std::vector<BenzingaEvent> RESTClient::list_benzinga_events(
     std::string path = "/v1/events";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -252,8 +252,8 @@ std::vector<BenzingaPressRelease> RESTClient::list_benzinga_press_releases(
     std::string path = "/v1/press-releases";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -344,8 +344,8 @@ std::vector<BenzingaAnalystRating> RESTClient::list_benzinga_analyst_ratings(
     std::string path = "/v1/ratings";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -434,8 +434,8 @@ std::vector<BenzingaAnalystInsight> RESTClient::list_benzinga_analyst_insights(
     std::string path = "/benzinga/v1/analyst-insights";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -521,8 +521,8 @@ std::vector<BenzingaAnalyst> RESTClient::list_benzinga_analysts(
     std::string path = "/benzinga/v1/analysts";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -603,8 +603,8 @@ std::vector<BenzingaConsensusRating> RESTClient::list_benzinga_consensus_ratings
     std::string path = "/benzinga/v1/consensus-ratings/" + ticker;
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -696,8 +696,8 @@ std::vector<BenzingaEarning> RESTClient::list_benzinga_earnings(
     std::string path = "/benzinga/v1/earnings";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -781,8 +781,8 @@ RESTClient::list_benzinga_firms(const std::optional<std::string> &benzinga_id,
     std::string path = "/benzinga/v1/firms";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -857,8 +857,8 @@ std::vector<BenzingaGuidance> RESTClient::list_benzinga_guidance(
     std::string path = "/benzinga/v1/guidance";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -964,8 +964,8 @@ std::vector<BenzingaNews> RESTClient::list_benzinga_news_v2(
     std::string path = "/benzinga/v2/news";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -1059,8 +1059,8 @@ std::vector<BenzingaRating> RESTClient::list_benzinga_ratings(
     std::string path = "/benzinga/v1/ratings";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");

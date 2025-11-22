@@ -33,7 +33,7 @@ namespace massive::rest {
 
 class RESTClient {
 public:
-    RESTClient(ClientConfig config, std::shared_ptr<core::IHttpTransport> transport);
+    RESTClient(core::ClientConfig config, std::shared_ptr<core::IHttpTransport> transport);
 
     // Aggregates (Bars) - All methods
     std::vector<Agg> list_aggs(const std::string &ticker, int multiplier,
@@ -961,7 +961,7 @@ private:
     std::map<std::string, std::string>
     build_headers(const std::optional<RequestOptions> &options = std::nullopt) const;
 
-    ClientConfig config_;
+    core::ClientConfig config_;
     std::shared_ptr<core::IHttpTransport> transport_;
     std::shared_ptr<core::JsonCodec> json_codec_;
 };

@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build-and-upload:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        include:
+          - os: ubuntu-latest
+            artifact_name: massive-cpp-linux
+          - os: macos-latest
+            artifact_name: massive-cpp-macos
+          - os: windows-latest
+            artifact_name: massive-cpp-windows
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      if: matrix.os == 'ubuntu-latest'
+      run: sudo apt-get update && sudo apt-get install -y libssl-dev
+
+    - name: Install dependencies
+      if: matrix.os == 'macos-latest'
+      run: brew install openssl
+
+    - name: Set up CMake
+      uses: jwlawson/actions-setup-cmake@v1.14
+
+    - name: Configure
+      run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+    - name: Build
+      run: cmake --build build --config Release -j$(nproc 2>/dev/null || echo 2)
+
+    - name: Install
+      run: cmake --install build --prefix install
+
+    - name: Create archive
+      shell: bash
+      run: |
+        cd install
+        if [ "${{ matrix.os }}" == "windows-latest" ]; then
+          tar -czf ../${{ matrix.artifact_name }}.tar.gz *
+        else
+          tar -czf ../${{ matrix.artifact_name }}.tar.gz *
+        fi
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ matrix.artifact_name }}
+        path: ${{ matrix.artifact_name }}.tar.gz
+

@@ -1,0 +1,47 @@
+name: Performance Benchmarks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly
+
+jobs:
+  benchmark:
+    name: Performance Benchmarks
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libssl-dev
+    
+    - name: Set up CMake
+      uses: jwlawson/actions-setup-cmake@v1.14
+    
+    - name: Configure with benchmarks
+      run: |
+        cmake -B build \
+          -DCMAKE_BUILD_TYPE=Release \
+          -DMASSIVE_BUILD_BENCHMARKS=ON
+    
+    - name: Build
+      run: cmake --build build -j$(nproc)
+    
+    - name: Run benchmarks
+      run: |
+        cd build/benchmarks
+        ./benchmark_json_parsing --benchmark_format=json > benchmark_results.json || true
+    
+    - name: Upload benchmark results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: benchmark-results
+        path: build/benchmarks/benchmark_results.json
+

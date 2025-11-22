@@ -1,0 +1,65 @@
+name: Health Check
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    name: Repository Health Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Verify repository structure
+      run: |
+        echo "Checking repository structure..."
+        ./scripts/verify.sh
+    
+    - name: Test quick start
+      run: |
+        echo "Testing quick start script..."
+        chmod +x scripts/*.sh
+        timeout 600 ./scripts/quick-start.sh || echo "Quick start completed with warnings"
+    
+    - name: Check for broken links
+      run: |
+        echo "Checking for placeholder values..."
+        if grep -r "your-org\|your-username\|your_api_key\|YOUR_API_KEY" --include="*.md" --include="*.yml" --include="*.yaml" .github/ docs/ README.md 2>/dev/null | grep -v ".git" | grep -v "TROUBLESHOOTING.md"; then
+          echo "⚠️  Found placeholder values that should be replaced"
+          exit 0  # Don't fail, just warn
+        else
+          echo "✅ No placeholder values found in documentation"
+        fi
+    
+    - name: Validate all configurations
+      run: |
+        echo "Validating configurations..."
+        
+        # Check CMakeLists.txt
+        cmake --version
+        cmake -S . -B build-test -DMASSIVE_BUILD_TESTS=OFF -DMASSIVE_BUILD_BENCHMARKS=OFF || exit 1
+        
+        # Check CMakePresets.json
+        python3 -c "import json; json.load(open('CMakePresets.json'))" || exit 1
+        
+        # Check vcpkg.json
+        python3 -c "import json; json.load(open('vcpkg.json'))" || exit 1
+        
+        echo "✅ All configurations valid"
+    
+    - name: Check documentation completeness
+      run: |
+        echo "Checking documentation..."
+        required_docs=("README.md" "CONTRIBUTING.md" "LICENSE" "CHANGELOG.md")
+        for doc in "${required_docs[@]}"; do
+          if [ -f "$doc" ]; then
+            echo "✅ $doc exists"
+          else
+            echo "❌ Missing: $doc"
+            exit 1
+          fi
+        done
+

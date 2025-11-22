@@ -34,8 +34,8 @@ std::vector<EtfListItem> RESTClient::list_etfs(const std::optional<std::string> 
     std::string path = "/v3/reference/etfs";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -101,8 +101,8 @@ EtfDetails RESTClient::get_etf_details(const std::string &ticker) {
     std::string path = "/v3/reference/etfs/" + ticker;
     auto response = send_request(core::HttpMethod::Get, path);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -182,8 +182,8 @@ std::vector<EtfHolding> RESTClient::list_etf_holdings(const std::string &ticker,
     std::string path = "/v3/reference/etfs/" + ticker + "/holdings";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -264,8 +264,8 @@ std::vector<EtfPerformance> RESTClient::get_etf_performance(
     std::string path = "/v3/reference/etfs/" + ticker + "/performance";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -352,8 +352,8 @@ std::vector<EtfGlobalAnalytics> RESTClient::get_etf_global_analytics(
     std::string path = "/etf-global/v1/analytics";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -454,8 +454,8 @@ std::vector<EtfGlobalConstituent> RESTClient::get_etf_global_constituents(
     std::string path = "/etf-global/v1/constituents";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -547,8 +547,8 @@ std::vector<EtfGlobalFundFlow> RESTClient::get_etf_global_fund_flows(
     std::string path = "/etf-global/v1/fund-flows";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -640,8 +640,8 @@ std::vector<EtfGlobalProfile> RESTClient::get_etf_global_profiles(
     std::string path = "/etf-global/v1/profiles";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");
@@ -743,8 +743,8 @@ std::vector<EtfGlobalTaxonomy> RESTClient::get_etf_global_taxonomies(
     std::string path = "/etf-global/v1/taxonomies";
     auto response = send_request(core::HttpMethod::Get, path, params);
 
-    simdjson::ondemand::parser parser;
-    simdjson::padded_string json = response.body;
+    ::simdjson::ondemand::parser parser;
+    ::simdjson::padded_string json = response.body;
     auto doc_result = parser.iterate(json);
     if (doc_result.error()) {
         throw std::runtime_error("Failed to parse JSON response");

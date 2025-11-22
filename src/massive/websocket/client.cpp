@@ -23,7 +23,7 @@ namespace ssl = boost::asio::ssl;
 using tcp = boost::asio::ip::tcp;
 
 // PIMPL structure for WebSocket implementation
-struct WebSocketClient::Impl {
+struct Impl {
     net::io_context ioc;
     ssl::context ctx{ssl::context::sslv23_client};
     std::unique_ptr<websocket::stream<beast::ssl_stream<tcp::socket>>> ws;
@@ -55,7 +55,7 @@ WebSocketClient::WebSocketClient(
     , scheduled_subscriptions_()
     , needs_resubscribe_(false)
     , connected_(false)
-    , websocket_impl_(new Impl())
+    , websocket_impl_(static_cast<void*>(new Impl()))
 {
     if (api_key.empty()) {
         throw AuthError("API key is required for WebSocket connection");

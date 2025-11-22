@@ -1,0 +1,41 @@
+name: Documentation
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'include/**'
+      - 'docs/**'
+      - 'Doxyfile.in'
+  workflow_dispatch:
+
+jobs:
+  docs:
+    name: Generate Documentation
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install Doxygen
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y doxygen graphviz
+    
+    - name: Set up CMake
+      uses: jwlawson/actions-setup-cmake@v1.14
+    
+    - name: Configure
+      run: |
+        cmake -B build -DMASSIVE_BUILD_DOCS=ON
+    
+    - name: Generate docs
+      run: cmake --build build --target docs
+    
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build/docs/html
+
