@@ -33,14 +33,22 @@ jobs:
       uses: jwlawson/actions-setup-cmake@v2.0
 
     - name: Configure
+      shell: bash
       run: |
         cmake -B build \
           -DCMAKE_BUILD_TYPE=Release \
           -DMASSIVE_BUILD_TESTS=ON
 
     - name: Build
-      run: cmake --build build --config Release -j$(nproc 2>/dev/null || echo 2)
+      shell: bash
+      run: |
+        if [ "${{ matrix.os }}" == "windows-latest" ]; then
+          cmake --build build --config Release
+        else
+          cmake --build build --config Release -j$(nproc 2>/dev/null || echo 2)
+        fi
 
     - name: Test
+      shell: bash
       working-directory: build
       run: ctest --output-on-failure || true
